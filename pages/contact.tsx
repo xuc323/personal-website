@@ -1,5 +1,3 @@
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
 import Head from "next/head";
 
 export default function Contact() {
@@ -8,9 +6,6 @@ export default function Contact() {
       <Head>
         <title>Contact Me</title>
       </Head>
-      <header>
-        <Navbar />
-      </header>
       <main className="flex justify-center items-center py-3">
         <div>
           <h1 className="text-center text-4xl font-bold">Contact Me</h1>
@@ -22,9 +17,6 @@ export default function Contact() {
           </div>
         </div>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 }

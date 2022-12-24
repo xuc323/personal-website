@@ -1,5 +1,3 @@
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
 import Head from "next/head";
 
 export default function About() {
@@ -8,9 +6,6 @@ export default function About() {
       <Head>
         <title>About</title>
       </Head>
-      <header>
-        <Navbar />
-      </header>
       <main className="flex justify-center items-center py-3">
         <div>
           <h1 className="text-center text-4xl font-bold">About Me</h1>
@@ -22,9 +17,6 @@ export default function About() {
           </div>
         </div>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 }
