@@ -1,11 +1,6 @@
-import Head from "next/head";
-
 export default function Contact() {
   return (
     <>
-      <Head>
-        <title>Contact Me</title>
-      </Head>
       <main className="flex justify-center items-center py-3">
         <div>
           <h1 className="text-center text-4xl font-bold">Contact Me</h1>

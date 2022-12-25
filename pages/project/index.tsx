@@ -1,12 +1,10 @@
-import Head from "next/head";
 import Link from "next/link";
+import Meta from "../../components/Meta";
 
 export default function Project() {
   return (
     <>
-      <Head>
-        <title>Project</title>
-      </Head>
+      <Meta title="Projects" description="All my project experiences." />
       <main className="flex justify-center items-center py-3">
         <div>
           <h1 className="text-center text-4xl font-bold">

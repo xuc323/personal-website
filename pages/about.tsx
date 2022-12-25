@@ -1,11 +1,6 @@
-import Head from "next/head";
-
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About</title>
-      </Head>
       <main className="flex justify-center items-center py-3">
         <div>
           <h1 className="text-center text-4xl font-bold">About Me</h1>
