@@ -3,8 +3,10 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <div className="text-center bg-black p-5 text-white w-full absolute bottom-0">
-      <p>Copyright &copy; {year}, www.xchen.org</p>
-    </div>
+    <footer>
+      <div className="text-center bg-black p-5 text-white w-full absolute bottom-0">
+        <p>Copyright &copy; {year}, www.xchen.org</p>
+      </div>
+    </footer>
   );
 }

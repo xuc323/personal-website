@@ -5,7 +5,9 @@ export default function Home() {
     <>
       <Meta title="Home Page" />
       <main className="flex justify-center items-center h-[50vh]">
-        <h1 className="font-bold text-5xl">Welcome to My Website</h1>
+        <h1 className="font-bold text-5xl text-center">
+          Welcome to My Website
+        </h1>
       </main>
     </>
   );
