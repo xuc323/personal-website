@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       <Meta />
       <Navbar />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );

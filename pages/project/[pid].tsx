@@ -1,21 +1,25 @@
 import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Meta from "../../components/Meta";
 
-export default function Project(props: { message: string }) {
+type projectProps = {
+  message: string;
+};
+
+export default function Project(props: projectProps) {
   const router = useRouter();
   const { pid } = router.query;
 
   return (
     <>
-      <main className="flex justify-center items-center py-3">
-        <div>
-          <h1 className="text-center text-4xl font-bold">{pid}</h1>
-          <div className="mx-auto mt-8 rounded-2xl shadow-lg">
-            <p className="p-5">This page is about project {pid}.</p>
-            <p>{props.message}</p>
-          </div>
+      <Meta />
+      <div className="py-3">
+        <h1 className="text-center text-4xl font-bold">{pid}</h1>
+        <div className="w-10/12 mx-auto mt-8 rounded-2xl shadow-lg">
+          <p className="p-5">This page is about project {pid}.</p>
+          <p className="p-5">{props.message}</p>
         </div>
-      </main>
+      </div>
     </>
   );
 }
