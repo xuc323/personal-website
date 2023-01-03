@@ -3,13 +3,17 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function Navbar() {
+  // state to check if the burger menu is clicked
+  // this only works on smaller screen
   const [isOpen, setIsOpen] = useState(false);
+
+  // get the current url so navbar item will have a grey out background
   const router = useRouter();
   const path = router.pathname.split("/")[1];
 
   return (
-    <header>
-      <nav className="flex justify-between items-center gap-8 px-2 border-b-2 shadow-md max-sm:flex-col max-sm:gap-0 transition-all font-serif">
+    <header className="w-full bg-white border-b-1 shadow-md font-serif">
+      <nav className="flex justify-between items-center max-w-4xl mx-auto gap-8 p-2 max-sm:flex-col max-sm:gap-0 transition-all">
         <div className="flex justify-between w-full items-center">
           <Link href="/" className="px-3">
             <svg
@@ -62,7 +66,7 @@ export default function Navbar() {
           <li className="text-center">
             <Link
               href="/project"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-3 transition-all hover:text-black max-sm:w-full ${
+              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all hover:text-black max-sm:w-full ${
                 path === "project" ? "bg-gray-300 rounded-2xl" : ""
               }`}
               onClick={() => setIsOpen(false)}
@@ -73,7 +77,7 @@ export default function Navbar() {
           <li className="text-center">
             <Link
               href="/about"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-3 transition-all hover:text-black max-sm:w-full ${
+              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all hover:text-black max-sm:w-full ${
                 path === "about" ? "bg-gray-300 rounded-2xl" : ""
               }`}
               onClick={() => setIsOpen(false)}
@@ -84,7 +88,7 @@ export default function Navbar() {
           <li className="text-center">
             <Link
               href="/contact"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-3 transition-all hover:text-black max-sm:w-full ${
+              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all hover:text-black max-sm:w-full ${
                 path === "contact" ? "bg-gray-300 rounded-2xl" : ""
               }`}
               onClick={() => setIsOpen(false)}
