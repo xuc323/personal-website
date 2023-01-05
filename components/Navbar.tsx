@@ -32,6 +32,7 @@ export default function Navbar() {
           {/* Burger menu icon*/}
           <button
             role="menu"
+            aria-label="Menu"
             className="hidden h-12 w-12 justify-center items-center group max-sm:flex max-sm:flex-col"
             onClick={() => {
               setIsOpen(!isOpen);
