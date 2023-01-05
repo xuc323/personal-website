@@ -31,7 +31,7 @@ export default function Project() {
             privileges to different users, so certain channels will only be
             accessible to the right users. As the Discord community is growing,
             there might be times when users need to gain privileges to access
-            certain channels. Since the administrators won&#39;t be online all
+            certain channels. Since the administrators won&apos;t be online all
             the time, bots seem reasonable to take this job.
           </p>
           <p className="m-3 text-black dark:text-white">
@@ -63,7 +63,7 @@ export default function Project() {
           </p>
           <p className="m-3 text-black dark:text-white">
             At this time, the Welcome Bot recognizes around 20 commands, and
-            there&#39;s still much more to add.
+            there&apos;s still much more to add.
           </p>
         </div>
       </div>

@@ -19,7 +19,8 @@ export default function Footer() {
     <footer>
       <div className="font-serif text-center bg-black p-5 text-white w-full absolute bottom-0">
         <button
-          type="button"
+          role="button"
+          aria-label="Toggle Dark Mode"
           className="absolute block border p-1 rounded-lg duration-500 bg-white text-black hover:bg-black hover:text-white dark:bg-black dark:text-white dark:hover:text-black dark:hover:bg-white"
           onClick={() => setDark(!dark)}
         >
