@@ -73,8 +73,8 @@ export default function Project() {
         <Link href={"/project"} className="text-blue-500">
           {"<- Project"}
         </Link>
-        <Link href={"/project/welcomebot"} className="text-blue-500">
-          {"Discord Welcome Bot ->"}
+        <Link href={"/project/visualization"} className="text-blue-500">
+          {"STEM Visualization ->"}
         </Link>
       </div>
     </>
