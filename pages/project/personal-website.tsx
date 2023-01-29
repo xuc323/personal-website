@@ -19,7 +19,7 @@ export default function Project() {
             content from different web pages, we also feel the joy of
             interactivity from the web pages.
           </p>
-          <div className="flex flex-row p-3 justify-between items-center gap-2 max-w-md mx-auto border rounded-2xl bg-white shadow-xl">
+          <div className="flex flex-row p-3 justify-between items-center gap-2 max-w-md mx-auto border rounded-2xl bg-white shadow-xl duration-300 dark:bg-black">
             <Image
               src="/project/react.svg"
               width={90}
@@ -31,6 +31,7 @@ export default function Project() {
               width={90}
               height={90}
               alt="nextjs icon"
+              className="rounded-full border bg-white"
             />
             <Image
               src="/project/tailwind.svg"

@@ -38,6 +38,7 @@ export default function Project() {
               width={90}
               height={90}
               alt="javascript logo"
+              className="rounded-2xl"
             />
             <Image
               src="/project/webgl.svg"

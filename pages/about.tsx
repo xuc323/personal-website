@@ -19,8 +19,9 @@ export default function About() {
             <Image src="/lehigh.png" width={300} height={300} alt="lehigh" />
           </Link>
           <p className="m-3 p-5 text-black dark:text-white">
-            This is Xu Chen, currently an undergraduate student at Lehigh
-            University. I&apos;m also actively looking for job opportunities.
+            Hello! My name is Xu Chen, currently an undergraduate student at
+            Lehigh University. I&apos;m also actively looking for job
+            opportunities.
           </p>
         </div>
       </div>
