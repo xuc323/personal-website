@@ -11,8 +11,9 @@ export default function Document() {
           strategy="beforeInteractive"
         />
         <Script id="google-tag" strategy="beforeInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
               dataLayer.push(arguments);
             }
             gtag('js', new Date());
