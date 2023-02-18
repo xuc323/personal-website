@@ -31,7 +31,7 @@ export default function Navbar() {
           </Link>
           {/* Burger menu icon*/}
           <button
-            role="menu"
+            role="navigation"
             aria-label="Menu"
             className="hidden h-12 w-12 justify-center items-center group max-sm:flex max-sm:flex-col"
             onClick={() => {
@@ -68,11 +68,11 @@ export default function Navbar() {
           <li className="text-center">
             <Link
               href="/project"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all hover:text-black dark:hover:text-white max-sm:w-full ${
+              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all ${
                 path === "project"
                   ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
                   : ""
-              }`}
+              } hover:text-black dark:hover:text-white max-sm:w-full`}
               onClick={() => setIsOpen(false)}
             >
               Project
@@ -81,11 +81,11 @@ export default function Navbar() {
           <li className="text-center">
             <Link
               href="/about"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all hover:text-black dark:hover:text-white max-sm:w-full ${
+              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all ${
                 path === "about"
                   ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
                   : ""
-              }`}
+              } hover:text-black dark:hover:text-white max-sm:w-full`}
               onClick={() => setIsOpen(false)}
             >
               About
@@ -94,11 +94,11 @@ export default function Navbar() {
           <li className="text-center">
             <Link
               href="/contact"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all hover:text-black dark:hover:text-white max-sm:w-full ${
+              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all ${
                 path === "contact"
                   ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
                   : ""
-              }`}
+              } hover:text-black dark:hover:text-white max-sm:w-full`}
               onClick={() => setIsOpen(false)}
             >
               Contact

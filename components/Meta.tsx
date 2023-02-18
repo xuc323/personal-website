@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-type headProps = {
+type HeadProps = {
   title?: string;
   keywords?: string;
   description?: string;
@@ -10,7 +10,7 @@ export default function Meta({
   title = "Xu's Website",
   keywords = "Personal Website, Experiences, Web Development",
   description = "Get to know Xu.",
-}: headProps) {
+}: HeadProps) {
   return (
     <Head>
       <meta
