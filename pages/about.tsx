@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Meta } from "../components";
+import { Meta } from "@/components";
 import Image from "next/image";
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
             className="float-right m-5 p-5"
             aria-label="lehigh university"
           >
-            <Image src="/lehigh.png" width={300} height={300} alt="lehigh" />
+            <Image src="/lehigh.png" width={300} height={65} alt="lehigh" />
           </Link>
           <p className="m-3 text-black dark:text-white">
             Hello! Glad you are here!

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CardList({ items }: { items: CardItemProps[] }) {
   return (
     <div className="w-10/12 mx-auto mt-8 rounded-2xl max-w-3xl shadow-lg bg-white duration-300 max-sm:w-full max-sm:shadow-none dark:bg-black">
-      <ul className="grid grid-cols-3 p-5 max-md:grid-cols-2 max-sm:grid-cols-1">
+      <ul className="grid grid-cols-2 p-5 max-md:grid-cols-2 max-sm:grid-cols-1">
         {items.map((item, index) => {
           return (
             <CardItem

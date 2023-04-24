@@ -18,7 +18,7 @@ export default function Footer() {
   }, [dark]);
 
   return (
-    <footer className="font-serif text-center bg-black p-5 text-white w-full absolute bottom-0 max-sm:px-2">
+    <footer className="font-serif text-center border-t-2 bg-gray-100 p-5 text-gray-500 w-full absolute bottom-0 max-sm:px-2 dark:bg-black">
       <div className="flex text-center justify-between items-center max-w-4xl mx-auto px-2">
         <div className="flex w-1/12 justify-start">
           <button

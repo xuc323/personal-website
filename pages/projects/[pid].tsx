@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
-import Meta from "../../components/Meta";
+import { Meta } from "@/components";
 
 type projectProps = {
   message: string;
