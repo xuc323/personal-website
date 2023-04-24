@@ -12,7 +12,7 @@ export default function Navbar() {
   const path = router.pathname.split("/")[1];
 
   return (
-    <header className="w-full bg-white border-b-1 shadow-md font-serif dark:bg-black duration-300">
+    <header className="w-full bg-white border-b-2 font-serif dark:bg-black duration-300">
       <nav className="flex justify-between items-center max-w-4xl mx-auto gap-8 p-2 max-sm:flex-col max-sm:gap-0">
         <div className="flex justify-between w-full items-center">
           <Link href="/" className="px-3">
@@ -67,9 +67,9 @@ export default function Navbar() {
         >
           <li className="text-center">
             <Link
-              href="/project"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all ${
-                path === "project"
+              href="/projects"
+              className={`no-underline w-20 text-center inline-block items-center p-2 transition-all ${
+                path === "projects"
                   ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
                   : ""
               } hover:text-black dark:hover:text-white max-sm:w-full`}
@@ -80,8 +80,21 @@ export default function Navbar() {
           </li>
           <li className="text-center">
             <Link
+              href="/experiences"
+              className={`no-underline text-center inline-block items-center p-2 transition-all ${
+                path === "experiences"
+                  ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
+                  : ""
+              } hover:text-black dark:hover:text-white max-sm:w-full`}
+              onClick={() => setIsOpen(false)}
+            >
+              Experience
+            </Link>
+          </li>
+          <li className="text-center">
+            <Link
               href="/about"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all ${
+              className={`no-underline w-20 text-center inline-block items-center p-2 transition-all ${
                 path === "about"
                   ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
                   : ""
@@ -89,19 +102,6 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               About
-            </Link>
-          </li>
-          <li className="text-center">
-            <Link
-              href="/contact"
-              className={`no-underline h-full w-20 text-center inline-block items-center p-2 transition-all ${
-                path === "contact"
-                  ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
-                  : ""
-              } hover:text-black dark:hover:text-white max-sm:w-full`}
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
             </Link>
           </li>
         </ul>

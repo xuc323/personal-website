@@ -1,4 +1,4 @@
-import Meta from "../../components/Meta";
+import { Meta } from "@/components";
 import Image from "next/image";
 
 export default function Project() {
@@ -9,7 +9,7 @@ export default function Project() {
         <h1 className="text-center text-4xl font-bold text-black dark:text-white">
           Music Quiz Bowl
         </h1>
-        <div className="w-10/12 mx-auto m-3 bg-white rounded-2xl shadow-lg p-5 indent-10 max-w-3xl max-sm:w-full duration-300 max-sm:shadow-none dark:bg-black">
+        <div className="w-10/12 mx-auto m-3 bg-white rounded-2xl shadow-lg p-5 max-w-3xl max-sm:w-full duration-300 max-sm:shadow-none dark:bg-black">
           <p className="m-3 text-black dark:text-white">
             This project was about a Computer Science course offered at Lehigh
             University. The course was called Web Systems Programming in which

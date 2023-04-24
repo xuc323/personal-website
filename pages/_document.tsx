@@ -16,7 +16,8 @@ export default function Document() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-WDE3KLWSEF');`}
+            gtag('config', 'G-WDE3KLWSEF');
+          `}
         </Script>
       </Head>
       <body className="relative pb-16 m-0 min-h-screen bg-gray-50 dark:bg-stone-900 duration-300">
