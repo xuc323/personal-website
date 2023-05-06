@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useSelectedLayoutSegment } from "next/navigation";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -8,8 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   // get the current url so navbar item will have a grey out background
-  const router = useRouter();
-  const path = router.pathname.split("/")[1];
+  const path = useSelectedLayoutSegment();
 
   return (
     <header className="w-full bg-white border-b-2 font-serif dark:bg-black duration-300">

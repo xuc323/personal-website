@@ -1,4 +1,10 @@
-import { CardList, Meta, type CardItemProps } from "@/components";
+import CardList, { type CardItemProps } from "@/components/CardList";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "All my project experiences.",
+};
 
 export default function Project() {
   const itemList: CardItemProps[] = [
@@ -17,14 +23,11 @@ export default function Project() {
   ];
 
   return (
-    <>
-      <Meta title="Projects" description="All my project experiences." />
-      <div className="py-3">
-        <h1 className="text-center text-4xl text-black font-bold dark:text-white">
-          Projects
-        </h1>
-        <CardList items={itemList} />
-      </div>
-    </>
+    <div className="py-3">
+      <h1 className="text-center text-4xl text-black font-bold dark:text-white">
+        Projects
+      </h1>
+      <CardList items={itemList} />
+    </div>
   );
 }
