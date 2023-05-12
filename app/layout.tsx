@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
@@ -36,7 +35,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <Analytics />
       </body>
     </html>
   );
