@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "./globals.css";
 import Script from "next/script";
 import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";

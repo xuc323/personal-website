@@ -2,11 +2,7 @@
 import { useEffect, useState } from "react";
 
 export default function DarkModeIcon() {
-  const [dark, setDark] = useState(
-    typeof window !== "undefined"
-      ? window.matchMedia("(prefers-color-scheme: dark)").matches
-      : false
-  );
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
     if (dark) {
