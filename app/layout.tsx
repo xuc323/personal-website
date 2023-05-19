@@ -3,6 +3,7 @@ import Script from "next/script";
 import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Xu's Website",
@@ -18,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       {/* Google tag (gtag.js) */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_TAG}`}
@@ -32,9 +33,11 @@ export default function RootLayout({
             `}
       </Script>
       <body className="relative pb-16 m-0 min-h-screen bg-gray-50 dark:bg-stone-900 duration-300">
-        <Navbar />
-        {children}
-        <Footer />
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

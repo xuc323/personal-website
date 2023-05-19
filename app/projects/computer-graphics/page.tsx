@@ -1,5 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Computer Graphics",
+  description: "Computer Graphics is a course project",
+};
 
 export default function Project() {
   return (
