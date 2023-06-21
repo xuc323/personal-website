@@ -30,7 +30,7 @@ function CardItem({ link, name, preview }: CardItemProps) {
     <li className="m-2 min-h-[200px] text-center">
       <Link href={link} className="block border p-2 rounded-lg h-full w-full">
         <h4 className="text-blue-600">{name}</h4>
-        {preview ? <p className="p-2">{preview}</p> : <></>}
+        {preview && <p className="p-2">{preview}</p>}
       </Link>
     </li>
   );

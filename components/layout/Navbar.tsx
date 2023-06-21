@@ -69,9 +69,8 @@ export default function Navbar() {
             <Link
               href="/projects"
               className={`no-underline w-20 text-center inline-block items-center p-2 transition-all ${
-                path === "projects"
-                  ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
-                  : ""
+                path === "projects" &&
+                "bg-gray-300 rounded-2xl dark:bg-gray-700"
               } hover:text-black dark:hover:text-white max-sm:w-full`}
               onClick={() => setIsOpen(false)}
             >
@@ -82,9 +81,8 @@ export default function Navbar() {
             <Link
               href="/experiences"
               className={`no-underline text-center inline-block items-center p-2 transition-all ${
-                path === "experiences"
-                  ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
-                  : ""
+                path === "experiences" &&
+                "bg-gray-300 rounded-2xl dark:bg-gray-700"
               } hover:text-black dark:hover:text-white max-sm:w-full`}
               onClick={() => setIsOpen(false)}
             >
@@ -95,9 +93,7 @@ export default function Navbar() {
             <Link
               href="/about"
               className={`no-underline w-20 text-center inline-block items-center p-2 transition-all ${
-                path === "about"
-                  ? "bg-gray-300 rounded-2xl dark:bg-gray-700"
-                  : ""
+                path === "about" && "bg-gray-300 rounded-2xl dark:bg-gray-700"
               } hover:text-black dark:hover:text-white max-sm:w-full`}
               onClick={() => setIsOpen(false)}
             >
