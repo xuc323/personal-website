@@ -7,7 +7,7 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Xu's Website",
-  keywords: "Personal Website, Experiences, Web Development",
+  keywords: ["Personal Website", "Experiences", "Web Development", "Projects"],
   description: "Get to know Xu Chen.",
   authors: [{ name: "Xu Chen" }],
   manifest: "/site.webmanifest",
@@ -30,12 +30,12 @@ export default function RootLayout({
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_TAG}');
-            `}
+        `}
       </Script>
       <body className="relative pb-16 m-0 min-h-screen bg-gray-50 dark:bg-stone-900 duration-300">
         <Providers>
           <Navbar />
-          {children}
+          <main>{children}</main>
           <Footer />
         </Providers>
       </body>

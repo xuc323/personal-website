@@ -4,6 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
+  keywords: ["Personal Website", "Jobs", "Lehigh University", "Perficient"],
 };
 
 export default function About() {
@@ -24,13 +25,13 @@ export default function About() {
           Hello! Glad you are here!
         </p>
         <p className="m-3 text-black dark:text-white">
-          My name is Xu and I am a senior at Lehigh University. I am pursuing my
-          Computer Science Major here as well as a Data Science Minor. My CS
-          experience hasn&apos;t started until high school. I have always been
-          fascinated by how computers work and how they change our day-to-day
-          life. Therefore I joined a summer camp during that time in which I
-          learned my first programming language and could not wait to dive more
-          into the fundamentals.
+          My name is Xu, and I also go by Albert. I am a senior at Lehigh
+          University. I am pursuing my Computer Science Major here as well as a
+          Data Science Minor. My CS experience hasn&apos;t started until high
+          school. I have always been fascinated by how computers work and how
+          they change our day-to-day life. Therefore I joined a summer camp
+          during that time in which I learned my first programming language and
+          could not wait to dive more into the fundamentals.
         </p>
         <p className="m-3 text-black dark:text-white">
           At this stage, I am looking for a position that can contribute to big
