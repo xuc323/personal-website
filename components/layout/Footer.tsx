@@ -24,10 +24,18 @@ export default function Footer() {
           <p>Copyright &copy; {year}, www.xchen.org</p>
         </div>
         <div className="flex w-1/12 max-sm:w-2/12 justify-end gap-3">
-          <Link href="https://github.com/xuc323">
+          <Link
+            href="https://github.com/xuc323"
+            aria-label="Learn more at my Github page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsGithub size={24} className="transition-all hover:scale-125" />
           </Link>
-          <Link href="mailto:xuc@xchen.org?subject=[Website Contact]&body=Hello,%0D%0D[Your message goes here....]%0D%0D%0DBest,%0D[Your Name]">
+          <Link
+            href="mailto:xuc@xchen.org?subject=[Website Contact]&body=Hello,%0D%0D[Your message goes here....]%0D%0D%0DBest,%0D[Your Name]"
+            aria-label="Send me an email"
+          >
             <IoMdMail size={24} className="transition-all hover:scale-125" />
           </Link>
         </div>
