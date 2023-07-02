@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   keywords: ["Personal Website", "Experiences", "Web Development", "Projects"],
   description: "Get to know Xu Chen.",
   authors: [{ name: "Xu Chen" }],
-  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
