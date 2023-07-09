@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
-import dynamic from "next/dynamic";
+import DarkModeIcon from "./DarkModeIcon";
 
-const DarkModeIcon = dynamic(() => import("./DarkModeIcon"), {
-  ssr: false,
-  loading: () => (
-    <div className="border p-1 rounded-full w-6 h-6 bg-white dark:bg-black" />
-  ),
-});
+// import dynamic from "next/dynamic";
+// const DarkModeIcon = dynamic(() => import("./DarkModeIcon"), {
+//   ssr: false,
+//   loading: () => (
+//     <div className="border p-1 rounded-full w-6 h-6 bg-white dark:bg-black" />
+//   ),
+// });
 
 export default function Footer() {
   const date = new Date();

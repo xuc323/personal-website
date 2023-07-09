@@ -1,8 +1,11 @@
 "use client";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { BsSunFill, BsMoonFill } from "react-icons/bs";
 
 export default function DarkModeIcon() {
+  // we use the useTheme hook to get the current theme and
+  // the setTheme function to change the theme on click
   const { theme, setTheme } = useTheme();
 
   function handleClick() {
@@ -13,6 +16,15 @@ export default function DarkModeIcon() {
     }
   }
 
+  // since the theme is not available on the server, we
+  // need to hide the button on the server and only show
+  // it once the theme is available
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <button
       role="button"
@@ -21,8 +33,12 @@ export default function DarkModeIcon() {
       onClick={handleClick}
     >
       <div
-        className={`flex flex-row w-9 gap-1 duration-300 ${
-          theme === "dark" ? "-translate-x-1/2" : "translate-x-0"
+        className={`flex flex-row w-9 gap-1 transition-opacity duration-300 ${
+          mounted
+            ? `opacity-100 ${
+                theme === "dark" ? "-translate-x-1/2" : "translate-x-0"
+              }`
+            : "opacity-0"
         }`}
       >
         <BsSunFill size={14} />

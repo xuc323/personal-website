@@ -4,6 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   description:
     "Discord welcome bot designed to interact with the users in servers.",
+  keywords: ["Discord", "bot", "JavaScript", "Node.js", "Discord.js"],
 };
 
 export default function Project() {

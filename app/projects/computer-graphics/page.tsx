@@ -5,6 +5,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Computer Graphics",
   description: "Computer Graphics is a course project",
+  keywords: ["Computer Graphics", "WebGL", "JavaScript", "Web Development"],
 };
 
 export default function Project() {

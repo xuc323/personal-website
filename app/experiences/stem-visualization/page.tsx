@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Lehigh's Mountaintop Project STEM Visualization that explains engineering concepts.",
 };
 
-export default function Project() {
+export default function Experience() {
   return (
     <div className="py-3">
       <h1 className="text-center text-4xl font-bold text-black dark:text-white">

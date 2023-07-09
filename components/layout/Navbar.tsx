@@ -12,7 +12,7 @@ export default function Navbar() {
   const path = useSelectedLayoutSegment();
 
   return (
-    <header className="w-full bg-white border-b-2 font-serif dark:bg-black duration-300">
+    <header className="w-full border-b-2 bg-white font-serif sticky top-0">
       <nav className="flex justify-between items-center max-w-4xl mx-auto gap-8 p-2 max-sm:flex-col max-sm:gap-0">
         <div className="flex justify-between w-full items-center">
           <Link href="/" className="px-3">

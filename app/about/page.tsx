@@ -1,13 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import { bucket } from "@/components/firebase-admin/admin";
 
 export const metadata: Metadata = {
   title: "About",
-  keywords: ["Personal Website", "Jobs", "Lehigh University", "Perficient"],
+  keywords: [
+    "Xu Chen",
+    "Personal Website",
+    "Jobs",
+    "Lehigh University",
+    "Perficient",
+  ],
 };
 
-export default function About() {
+export default async function About() {
+  const image = await bucket.file("lehigh.png").getMetadata();
+  const imageData = image[0];
+
+  const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${
+    imageData.bucket
+  }/o/${encodeURIComponent(imageData.name)}?alt=media&token=${
+    imageData.metadata.firebaseStorageDownloadTokens
+  }`;
+
   return (
     <div className="py-3">
       <h1 className="text-center text-4xl font-bold dark:text-white">
@@ -19,7 +35,7 @@ export default function About() {
           className="float-right m-5 p-5"
           aria-label="lehigh university"
         >
-          <Image src="/lehigh.png" width={300} height={65} alt="lehigh" />
+          <Image src={imageUrl} width={300} height={65} alt="lehigh" />
         </Link>
         <p className="m-3 text-black dark:text-white">
           Hello! Glad you are here!
