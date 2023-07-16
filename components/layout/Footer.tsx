@@ -3,14 +3,6 @@ import { BsGithub } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import DarkModeIcon from "./DarkModeIcon";
 
-// import dynamic from "next/dynamic";
-// const DarkModeIcon = dynamic(() => import("./DarkModeIcon"), {
-//   ssr: false,
-//   loading: () => (
-//     <div className="border p-1 rounded-full w-6 h-6 bg-white dark:bg-black" />
-//   ),
-// });
-
 export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
