@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import { Providers } from "./providers";
+import { analytics } from "@/components/firebase/app";
 
 export const metadata: Metadata = {
   title: "Xu Chen",

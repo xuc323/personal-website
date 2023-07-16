@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
-import { getDownloadUrl } from "@/components/firebase-admin/admin";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,9 +13,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default async function About() {
-  const imageUrl = await getDownloadUrl("lehigh.png");
-
+export default function About() {
   return (
     <div className="py-3">
       <h1 className="text-center text-4xl font-bold dark:text-white">
@@ -28,7 +25,7 @@ export default async function About() {
           className="float-right m-5 p-5"
           aria-label="lehigh university"
         >
-          <Image src={imageUrl} width={300} height={65} alt="lehigh" />
+          <Image src="/lehigh.png" width={300} height={65} alt="lehigh" />
         </Link>
         <p className="m-3 text-black dark:text-white">
           Hello! Glad you are here!
