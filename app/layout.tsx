@@ -6,7 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Xu's Website",
+  title: "Xu Chen",
   keywords: ["Personal Website", "Experiences", "Web Development", "Projects"],
   description: "Get to know Xu Chen.",
   authors: [{ name: "Xu Chen" }],
@@ -31,7 +31,7 @@ export default function RootLayout({
             gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_TAG}');
         `}
       </Script>
-      <body className="relative pb-16 m-0 min-h-screen bg-gray-50 dark:bg-stone-900 duration-300">
+      <body className="relative pb-14 m-0 min-h-screen bg-gradient-to-br from-stone-100 to-sky-300">
         <Providers>
           <Navbar />
           <main>{children}</main>

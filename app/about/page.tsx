@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
-import { bucket } from "@/components/firebase-admin/admin";
+import { getDownloadUrl } from "@/components/firebase-admin/admin";
 
 export const metadata: Metadata = {
   title: "About",
@@ -15,14 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default async function About() {
-  const image = await bucket.file("lehigh.png").getMetadata();
-  const imageData = image[0];
-
-  const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${
-    imageData.bucket
-  }/o/${encodeURIComponent(imageData.name)}?alt=media&token=${
-    imageData.metadata.firebaseStorageDownloadTokens
-  }`;
+  const imageUrl = await getDownloadUrl("lehigh.png");
 
   return (
     <div className="py-3">
