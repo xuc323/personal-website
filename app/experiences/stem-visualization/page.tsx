@@ -1,5 +1,6 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   description:
@@ -70,14 +71,16 @@ export default function Experience() {
           select different attributes to add to the calculation and observe the
           performance.
         </p>
-        <div className="py-2 max-w-lg mx-auto">
-          <video autoPlay muted>
-            <source src="/experiences/demo.mp4" type="video/mp4" />
-            Video is not supported by your browser.
-          </video>
-        </div>
         <p className="m-3 py-2 text-black dark:text-white">
           This project is then passed along to other groups to add more modules.
+          The web application can be accessed{" "}
+          <Link
+            href="https://srrweb.cc.lehigh.edu/app/"
+            className="text-blue-500"
+          >
+            here
+          </Link>
+          .
         </p>
       </div>
     </div>

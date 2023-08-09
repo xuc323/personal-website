@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import "./globals.css";
-import Script from "next/script";
-import Footer from "@/components/layout/Footer";
-import { Metadata } from "next";
-import Navbar from "@/components/layout/Navbar";
+import type { ReactNode } from "react";
+import { AnalyticsProvider, FirebaseAppProvider } from "@/components/firebase";
 import { Providers } from "./providers";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Xu Chen",
@@ -12,32 +13,20 @@ export const metadata: Metadata = {
   authors: [{ name: "Xu Chen" }],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* Google tag (gtag.js) */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_TAG}`}
-      />
-      <Script id="google-analytics">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_TAG}');
-        `}
-      </Script>
-      <body className="relative pb-14 m-0 min-h-screen bg-gradient-to-br from-stone-100 to-sky-300">
-        <Providers>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </Providers>
-      </body>
+      <FirebaseAppProvider>
+        <AnalyticsProvider>
+          <body className="relative pb-14 m-0 min-h-screen bg-gradient-to-br from-stone-100 to-sky-300">
+            <Providers>
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+            </Providers>
+          </body>
+        </AnalyticsProvider>
+      </FirebaseAppProvider>
     </html>
   );
 }

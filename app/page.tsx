@@ -11,18 +11,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-      {/* <div className="p-28 ">
-        <h1 className="py-2 font-bold text-5xl bg-gradient-to-r from-gray-700 to-purple-300 bg-no-repeat bg-bottom bg-[length:100%_2px] bg">
-          About me
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugit
-          assumenda quibusdam, a minima quasi cupiditate? Ex exercitationem
-          assumenda modi tempora amet suscipit. Neque sequi nemo sapiente
-          voluptatem iusto itaque.
-        </p>
-        <button className="p-3 border rounded-xl shadow-lg">Read more</button>
-      </div> */}
     </div>
   );
 }

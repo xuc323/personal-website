@@ -1,6 +1,6 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 import Image from "next/image";
-import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Computer Graphics",
