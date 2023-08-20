@@ -11,9 +11,9 @@
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@next/mdx": "^13.4.13",
-    "firebase": "^10.1.0",
-    "next": "^13.4.13",
+    "@next/mdx": "^13.4.19",
+    "firebase": "^10.2.0",
+    "next": "^13.4.19",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,13 +21,13 @@
   },
   "devDependencies": {
     "@types/mdx": "^2.0.6",
-    "@types/node": "^20.5.0",
+    "@types/node": "^20.5.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.15",
     "eslint": "^8.47.0",
-    "eslint-config-next": "^13.4.13",
-    "postcss": "^8.4.27",
+    "eslint-config-next": "^13.4.19",
+    "postcss": "^8.4.28",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
   }
