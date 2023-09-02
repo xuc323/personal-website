@@ -16,11 +16,11 @@ export default function Project() {
       </h1>
       <div className="w-10/12 mx-auto m-3 bg-white rounded-2xl shadow-lg p-5 max-w-3xl max-sm:w-full duration-300 max-sm:shadow-none dark:bg-black">
         <p className="m-3 py-2 text-black dark:text-white">
-          Computers are evolving and becoming faster and faster, and so are our
-          expectations of what we see. We tend to see higher-standard, visually
-          appealing images. Thanks to how much computation the processors can do
-          nowadays, we can add a lot more details to the graphics, and graphical
-          computations can be done right on users&apos; devices.
+          Computers are evolving, so are our visual expectations. We tend to
+          look for higher-standard, visually appealing images. Thanks to how
+          much computation the processors can do nowadays, we can add a lot more
+          details to the graphics, and graphical computations can be done right
+          on users&apos; devices.
         </p>
         <p className="m-3 py-2 text-black dark:text-white">
           Computers do not generate graphics. They just follow the instructions
