@@ -1,6 +1,7 @@
 # Personal Website
 
-[![Deploy to Firebase Hosting on merge](https://github.com/xuc323/personal-website/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/xuc323/personal-website/actions/workflows/firebase-hosting-merge.yml)
+[![stats](https://img.shields.io/website-up-down-green-red/https/www.xchen.org)](https://www.xchen.org)
+[![Deploy to GitHub Pages](https://github.com/xuc323/personal-website/actions/workflows/nextjs.yml/badge.svg)](https://github.com/xuc323/personal-website/actions/workflows/nextjs.yml)
 
 My name is Xu, and I also go by Albert. I am a senior at Lehigh University. I am pursuing my Computer Science Major here as well as a Data Science Minor. My CS experience hasn't started until high school. I have always been fascinated by how computers work and how they change our day-to-day life. Therefore I joined a summer camp during that time in which I learned my first programming language and could not wait to dive more into the fundamentals.
 
