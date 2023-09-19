@@ -71,6 +71,12 @@ export default function Experience() {
           select different attributes to add to the calculation and observe the
           performance.
         </p>
+        <div className="max-w-xl mx-auto">
+          <video autoPlay muted>
+            <source src="/experiences/demo.mp4" type="video/mp4" />
+            Video is not supported by your browser.
+          </video>
+        </div>
         <p className="m-3 py-2 text-black dark:text-white">
           This project is then passed along to other groups to add more modules.
           The web application can be accessed{" "}
