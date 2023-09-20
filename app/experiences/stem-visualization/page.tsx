@@ -72,7 +72,7 @@ export default function Experience() {
           performance.
         </p>
         <div className="max-w-xl mx-auto">
-          <video autoPlay muted>
+          <video autoPlay muted controls>
             <source src="/experiences/demo.mp4" type="video/mp4" />
             Video is not supported by your browser.
           </video>
