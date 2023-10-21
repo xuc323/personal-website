@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="relative pb-14 m-0 min-h-screen bg-gradient-to-br from-stone-100 to-sky-300">
+      <body className="relative pb-14 m-0 min-h-screen transition-all bg-gradient-to-br from-stone-100 to-sky-300 dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
         <Providers>
           <Navbar />
           <main>{children}</main>
