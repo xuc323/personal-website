@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-export default function manifest(): MetadataRoute.Manifest {
+export default function Manifest(): MetadataRoute.Manifest {
   return {
     name: "Xu Chen",
     description: "Xu Chen's personal website",

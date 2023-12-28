@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import type { ReactNode } from "react";
 import { Providers } from "./providers";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -12,7 +11,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Xu Chen" }],
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="relative pb-14 m-0 min-h-screen transition-all bg-gradient-to-br from-stone-100 to-sky-300 dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
