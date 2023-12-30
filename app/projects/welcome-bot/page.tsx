@@ -32,7 +32,7 @@ export default function Project() {
           src="/projects/bot_logo.jpg"
           width={150}
           height={180}
-          alt="Bot Image"
+          alt="An image of a robot"
           className="mx-auto mb-5 rounded-2xl shadow-lg border p-1"
         />
         <Headline text="The Evolution of Discord: A Hub for Online Communities" />
@@ -43,7 +43,7 @@ export default function Project() {
           src="/projects/bot_info.png"
           width={600}
           height={400}
-          alt="Welcome Bot Info"
+          alt="Screenshot of the Welcome Bot's profile on Discord"
           className="mx-auto my-6 rounded-2xl shadow-lg border p-1"
         />
         <Headline text="Welcome Bot: My Contribution to Discord's Ecosystem" />
