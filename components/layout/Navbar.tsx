@@ -31,7 +31,7 @@ export default function Navbar() {
           </Link>
           {/* Burger menu icon*/}
           <button
-            role="navigation"
+            role="menu"
             aria-label="Menu"
             className="hidden h-12 w-12 justify-center items-center group max-sm:flex max-sm:flex-col"
             onClick={() => {

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "./providers";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
+import { ThemeProvider } from "@/components/ProviderUtils";
 
 export const metadata: Metadata = {
   title: "Xu Chen",
@@ -32,11 +32,11 @@ export default function RootLayout({
         `}
       </Script>
       <body className="relative pb-14 m-0 min-h-screen transition-all bg-gradient-to-br from-stone-100 to-sky-300 dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
-        <Providers>
+        <ThemeProvider>
           <Navbar />
           <main>{children}</main>
           <Footer />
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
