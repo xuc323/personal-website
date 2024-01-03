@@ -1,10 +1,26 @@
+import { Headline, Paragraph } from "@/components/TextUtils";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  title:
+    "Mountaintop Summer Project: Innovating STEM Education at Lehigh University",
   description:
-    "Lehigh's Mountaintop Project STEM Visualization that explains engineering concepts.",
+    "Join the journey of the Mountaintop Summer Project at Lehigh University, where students collaborate on STEM Visualization to reduce dropout rates. Discover how interactive web applications, blending chemistry, machine learning, and data science, are revolutionizing engineering education.",
+  keywords: [
+    "Mountaintop Summer Project",
+    "Lehigh University",
+    "STEM Visualization",
+    "interactive web application",
+    "engineering education",
+    "student-faculty collaboration",
+    "Python programming",
+    "Bokeh module",
+    "Scikit-learn",
+    "machine learning in education",
+    "data science for beginners",
+  ],
 };
 
 export default function Experience() {
@@ -14,24 +30,11 @@ export default function Experience() {
         STEM Visualization
       </h1>
       <div className="w-10/12 mx-auto m-3 bg-white rounded-2xl shadow-lg p-5 max-w-3xl max-sm:w-full duration-300 max-sm:shadow-none dark:bg-black">
-        <p className="m-3 py-2 text-black dark:text-white">
-          Mountaintop Summer Project is one of the programs that is offered by
-          my school, Lehigh University. It is the program hosted every summer in
-          which we work with professors who come up with the project details.
-          Students are then selected to help.
-        </p>
-        <p className="m-3 py-2 text-black dark:text-white">
-          I participated in one of the programs during the summer of 2021. The
-          program was called STEM Visualization. We built an interactive web
-          application that is currently running on the school&apos;s server. The
-          issue that the project was trying to solve is the high dropout rate of
-          engineering schools. Students first entering might get frustrated from
-          looking at all the complicated concepts and get scared of what would
-          happen moving forward. To help those students, we try to create a web
-          app that can show the introduction level concepts with both graphical
-          and video demonstrations.
-        </p>
-        <div className="flex flex-row p-3 justify-between items-center gap-2 max-w-md mx-auto border rounded-2xl bg-white shadow-xl">
+        <Headline text="Introduction to the Mountaintop Summer Project" />
+        <Paragraph text="Lehigh University's Mountaintop Summer Project is a unique program where students collaborate with faculty on diverse projects. Every summer, professors design the project details and select students to contribute. This program offers a hands-on experience, blending academic guidance with student innovation." />
+        <Headline text="My Experience with the STEM Visualization Program" />
+        <Paragraph text="In the summer of 2021, I participated in the STEM Visualization program. We developed an interactive web application, now hosted on the university's server, aimed at addressing the high dropout rates in engineering programs. Recognizing that new students often feel overwhelmed by complex concepts, our web app was designed to simplify these ideas through graphical and video demonstrations, making them more approachable and understandable." />
+        <div className="flex flex-row mb-8 p-3 justify-between items-center gap-2 max-w-md mx-auto border rounded-2xl bg-white shadow-xl">
           <Image
             src="/experiences/python.svg"
             width={90}
@@ -51,43 +54,26 @@ export default function Experience() {
             alt="bokeh icon"
           />
         </div>
-        <p className="m-3 py-2 text-black dark:text-white">
-          This project was an inheritance from previous years. Since the
-          professor who worked with us specializes in chemistry and machine
-          learning, our primary goal was to teach data science concepts to new
-          engineering students by demonstrating different processes on chemistry
-          datasets. We used Python as our main coding language because it is one
-          of the most popular languages in the machine learning field. As the
-          final project is a web application, we then chose Bokeh as our module
-          builder. Bokeh allows us to code in Python and translates to HTML and
-          CSS for content and JavaScript for interactivity. The machine learning
-          library we used was Scikit-learn because it is considered an
-          easy-to-learn and easy-to-use library.
-        </p>
-        <p className="m-3 py-2 text-black dark:text-white">
-          By performing basic data cleaning and modification, we were able to
-          separate it into training and testing data. We then used a few
-          algorithms including regressions and classifications. The user can
-          select different attributes to add to the calculation and observe the
-          performance.
-        </p>
-        <div className="max-w-xl mx-auto">
+        <Headline text="Developing Educational Tools with Chemistry and Machine Learning" />
+        <Paragraph text="Building on the work of previous years, our project, guided by a professor specializing in chemistry and machine learning, focused on introducing data science concepts to new engineering students. We used Python, a leading language in machine learning, and selected Bokeh for building our web application modules. Bokeh translates Python code into HTML, CSS, and JavaScript, ensuring seamless interactivity. For our machine learning tasks, we utilized Scikit-learn, known for its simplicity and effectiveness." />
+        <div className="max-w-xl mx-auto my-5 rounded-2xl border shadow-md overflow-hidden">
           <video autoPlay muted controls>
             <source src="/experiences/demo.mp4" type="video/mp4" />
             Video is not supported by your browser.
           </video>
         </div>
-        <p className="m-3 py-2 text-black dark:text-white">
-          This project is then passed along to other groups to add more modules.
-          The web application can be accessed{" "}
+        <Headline text="Interactive Learning through Data Science Techniques" />
+        <Paragraph text="Our approach involved basic data cleaning and segmentation into training and testing sets. We employed various algorithms, including regressions and classifications, allowing users to experiment with different attributes and observe the algorithm's performance. This interactive aspect aimed to demystify data science and make learning more engaging for engineering students." />
+        <Headline text="Passing the Baton: Ongoing Development of the Web Application" />
+        <Paragraph text="Upon completion of our phase of the project, we handed it over to the next group of students for further development. This process ensures the continuous evolution of the web application, adding new modules and features, and keeping the tool relevant and effective for future engineering students." />
+        <div className="text-center">
           <Link
             href="https://srrweb.cc.lehigh.edu/app/"
-            className="text-blue-500"
+            className="text-blue-500 underline hover:text-blue-800"
           >
-            here
+            Access the Application Here
           </Link>
-          .
-        </p>
+        </div>
       </div>
     </div>
   );
