@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Script from "next/script";
-import { ThemeProvider } from "@/components/ProviderUtils";
+import {
+  AnalyticsProvider,
+  FirebaseAppProvider,
+  ThemeProvider,
+} from "@/components/providers";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Xu Chen",
@@ -12,32 +16,20 @@ export const metadata: Metadata = {
   authors: [{ name: "Xu Chen" }],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
-      />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}');
-        `}
-      </Script>
-      <body className="relative pb-14 m-0 min-h-screen transition-all bg-gradient-to-br from-stone-100 to-sky-300 dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
-        <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
-      </body>
+      <FirebaseAppProvider>
+        <AnalyticsProvider>
+          <body className="relative pb-14 m-0 min-h-screen transition-all bg-gradient-to-br from-stone-100 to-sky-300 dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
+            <ThemeProvider>
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+            </ThemeProvider>
+          </body>
+        </AnalyticsProvider>
+      </FirebaseAppProvider>
     </html>
   );
 }

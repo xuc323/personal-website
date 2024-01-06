@@ -1,4 +1,5 @@
 "use client";
+
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { BsSunFill, BsMoonFill, BsLaptopFill } from "react-icons/bs";
@@ -47,7 +48,7 @@ export default function DarkModeIcon() {
       onClick={handleClick}
     >
       <div
-        className={`flex flex-row w-20 gap-[19px] transition-opacity duration-300 ${
+        className={`flex flex-row w-20 gap-[19px] duration-300 ${
           mounted ? `opacity-100 ${determineTransition(theme!)}` : "opacity-0"
         }`}
       >
