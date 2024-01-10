@@ -21,11 +21,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" suppressHydrationWarning>
       <FirebaseAppProvider>
         <AnalyticsProvider>
-          <body className="relative pb-14 m-0 min-h-screen transition-all bg-gradient-to-br from-stone-100 to-sky-300 dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
+          <body>
             <ThemeProvider>
-              <Navbar />
-              <main>{children}</main>
-              <Footer />
+              <div className="relative pb-[54px] m-0 min-h-screen transition-all bg-gradient-to-br from-stone-100 to-sky-300 dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
+                <Navbar />
+                <main>{children}</main>
+                <Footer />
+              </div>
             </ThemeProvider>
           </body>
         </AnalyticsProvider>

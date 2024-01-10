@@ -1,4 +1,9 @@
-import { Headline, Paragraph } from "@/components/TextUtils";
+import { PageContainer } from "@/components/ContainerUtils";
+import {
+  HeadParagraphContainer,
+  ParagraphContainer,
+  TitleContainer,
+} from "@/components/TextUtils";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,14 +31,33 @@ export const metadata: Metadata = {
 export default function Experience() {
   return (
     <div className="py-3">
-      <h1 className="text-center text-4xl font-bold text-black dark:text-white">
-        STEM Visualization
-      </h1>
-      <div className="w-10/12 mx-auto m-3 bg-white rounded-2xl shadow-lg p-5 max-w-3xl max-sm:w-full duration-300 max-sm:shadow-none dark:bg-black">
-        <Headline text="Introduction to the Mountaintop Summer Project" />
-        <Paragraph text="Lehigh University's Mountaintop Summer Project is a unique program where students collaborate with faculty on diverse projects. Every summer, professors design the project details and select students to contribute. This program offers a hands-on experience, blending academic guidance with student innovation." />
-        <Headline text="My Experience with the STEM Visualization Program" />
-        <Paragraph text="In the summer of 2021, I participated in the STEM Visualization program. We developed an interactive web application, now hosted on the university's server, aimed at addressing the high dropout rates in engineering programs. Recognizing that new students often feel overwhelmed by complex concepts, our web app was designed to simplify these ideas through graphical and video demonstrations, making them more approachable and understandable." />
+      <TitleContainer>STEM Visualization</TitleContainer>
+
+      <PageContainer>
+        <HeadParagraphContainer>
+          Introduction to the Mountaintop Summer Project
+        </HeadParagraphContainer>
+        <ParagraphContainer>
+          Lehigh University&apos;s Mountaintop Summer Project is a unique
+          program where students collaborate with faculty on diverse projects.
+          Every summer, professors design the project details and select
+          students to contribute. This program offers a hands-on experience,
+          blending academic guidance with student innovation.
+        </ParagraphContainer>
+
+        <HeadParagraphContainer>
+          My Experience with the STEM Visualization Program
+        </HeadParagraphContainer>
+        <ParagraphContainer>
+          In the summer of 2021, I participated in the STEM Visualization
+          program. We developed an interactive web application, now hosted on
+          the university&apos;s server, aimed at addressing the high dropout
+          rates in engineering programs. Recognizing that new students often
+          feel overwhelmed by complex concepts, our web app was designed to
+          simplify these ideas through graphical and video demonstrations,
+          making them more approachable and understandable.
+        </ParagraphContainer>
+
         <div className="flex flex-row mb-8 p-3 justify-between items-center gap-2 max-w-md mx-auto border rounded-2xl bg-white shadow-xl">
           <Image
             src="/experiences/python.svg"
@@ -54,18 +78,51 @@ export default function Experience() {
             alt="bokeh icon"
           />
         </div>
-        <Headline text="Developing Educational Tools with Chemistry and Machine Learning" />
-        <Paragraph text="Building on the work of previous years, our project, guided by a professor specializing in chemistry and machine learning, focused on introducing data science concepts to new engineering students. We used Python, a leading language in machine learning, and selected Bokeh for building our web application modules. Bokeh translates Python code into HTML, CSS, and JavaScript, ensuring seamless interactivity. For our machine learning tasks, we utilized Scikit-learn, known for its simplicity and effectiveness." />
+
+        <HeadParagraphContainer>
+          Developing Educational Tools with Chemistry and Machine Learning
+        </HeadParagraphContainer>
+        <ParagraphContainer>
+          Building on the work of previous years, our project, guided by a
+          professor specializing in chemistry and machine learning, focused on
+          introducing data science concepts to new engineering students. We used
+          Python, a leading language in machine learning, and selected Bokeh for
+          building our web application modules. Bokeh translates Python code
+          into HTML, CSS, and JavaScript, ensuring seamless interactivity. For
+          our machine learning tasks, we utilized Scikit-learn, known for its
+          simplicity and effectiveness.
+        </ParagraphContainer>
+
         <div className="max-w-xl mx-auto my-5 rounded-2xl border shadow-md overflow-hidden">
           <video autoPlay muted controls>
             <source src="/experiences/demo.mp4" type="video/mp4" />
             Video is not supported by your browser.
           </video>
         </div>
-        <Headline text="Interactive Learning through Data Science Techniques" />
-        <Paragraph text="Our approach involved basic data cleaning and segmentation into training and testing sets. We employed various algorithms, including regressions and classifications, allowing users to experiment with different attributes and observe the algorithm's performance. This interactive aspect aimed to demystify data science and make learning more engaging for engineering students." />
-        <Headline text="Passing the Baton: Ongoing Development of the Web Application" />
-        <Paragraph text="Upon completion of our phase of the project, we handed it over to the next group of students for further development. This process ensures the continuous evolution of the web application, adding new modules and features, and keeping the tool relevant and effective for future engineering students." />
+
+        <HeadParagraphContainer>
+          Interactive Learning through Data Science Techniques
+        </HeadParagraphContainer>
+        <ParagraphContainer>
+          Our approach involved basic data cleaning and segmentation into
+          training and testing sets. We employed various algorithms, including
+          regressions and classifications, allowing users to experiment with
+          different attributes and observe the algorithm&apos;s performance.
+          This interactive aspect aimed to demystify data science and make
+          learning more engaging for engineering students.
+        </ParagraphContainer>
+
+        <HeadParagraphContainer>
+          Passing the Baton: Ongoing Development of the Web Application
+        </HeadParagraphContainer>
+        <ParagraphContainer>
+          Upon completion of our phase of the project, we handed it over to the
+          next group of students for further development. This process ensures
+          the continuous evolution of the web application, adding new modules
+          and features, and keeping the tool relevant and effective for future
+          engineering students.
+        </ParagraphContainer>
+
         <div className="text-center">
           <Link
             href="https://srrweb.cc.lehigh.edu/app/"
@@ -74,7 +131,7 @@ export default function Experience() {
             Access the Application Here
           </Link>
         </div>
-      </div>
+      </PageContainer>
     </div>
   );
 }
