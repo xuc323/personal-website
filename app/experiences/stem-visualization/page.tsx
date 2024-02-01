@@ -4,6 +4,7 @@ import {
   ParagraphContainer,
   TitleContainer,
 } from "@/components/TextUtils";
+import { StorageVideo } from "@/components/providers";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -94,10 +95,7 @@ export default function Experience() {
         </ParagraphContainer>
 
         <div className="max-w-xl mx-auto my-5 rounded-2xl border shadow-md overflow-hidden">
-          <video autoPlay muted controls>
-            <source src="/experiences/demo.mp4" type="video/mp4" />
-            Video is not supported by your browser.
-          </video>
+          <StorageVideo reference="public/videos/demo.mp4" />
         </div>
 
         <HeadParagraphContainer>

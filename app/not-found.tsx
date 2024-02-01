@@ -4,6 +4,7 @@ export default function NotFound() {
       <h1 className="m-5 p-5 font-bold text-5xl">
         404 &middot; Page Not Found
       </h1>
+      <p>Whoops! The page does not exist.</p>
     </div>
   );
 }

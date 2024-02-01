@@ -1,20 +1,36 @@
+import {
+  GroupImageContainer,
+  PageContainer,
+} from "@/components/ContainerUtils";
+import { TitleContainer } from "@/components/TextUtils";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Computer Graphics",
-  description: "Computer Graphics is a course project",
-  keywords: ["Computer Graphics", "WebGL", "JavaScript", "Web Development"],
+  title: "Exploring Computer Graphics with WebGL Technology",
+  description:
+    "Dive into the world of computer graphics with a detailed account of a Lehigh University course. Discover how modern processors and WebGL technology enable the creation of intricate, high-quality graphics, and view the showcased projects on GitHub Pages.",
+  keywords: [
+    "Computer Graphics",
+    "Lehigh University",
+    "WebGL",
+    "JJavaScript programming",
+    "Web Development",
+    "graphic rendering",
+    "pixel coloration",
+    "trigonometry in graphics",
+    "GitHub Pages",
+    "graphical project display",
+  ],
 };
 
 export default function Project() {
   return (
     <div className="py-3">
-      <h1 className="text-center text-4xl font-bold text-black dark:text-white">
-        Computer Graphics
-      </h1>
-      <div className="w-10/12 mx-auto m-3 bg-white rounded-2xl shadow-lg p-5 max-w-3xl max-sm:w-full duration-300 max-sm:shadow-none dark:bg-black">
+      <TitleContainer>Computer Graphics</TitleContainer>
+
+      <PageContainer>
         <p className="m-3 py-2 text-black dark:text-white">
           Computers are evolving, so are our visual expectations. We tend to
           look for higher-standard, visually appealing images. Thanks to how
@@ -29,7 +45,7 @@ export default function Project() {
           Thankfully there are programming languages out there that simplify
           this process.
         </p>
-        <div className="flex flex-row p-5 justify-between items-center gap-2 max-w-md mx-auto border rounded-2xl bg-white shadow-xl">
+        <GroupImageContainer>
           <Image
             src="/projects/html.svg"
             width={90}
@@ -49,7 +65,7 @@ export default function Project() {
             height={38}
             alt="webgl logo"
           />
-        </div>
+        </GroupImageContainer>
         <p className="m-3 py-2 text-black dark:text-white">
           The project is about a course offered at Lehigh University. The course
           is called Computer Graphics and I took the course in the Fall of 2022.
@@ -69,7 +85,7 @@ export default function Project() {
             GitHub Pages.
           </Link>
         </p>
-      </div>
+      </PageContainer>
     </div>
   );
 }
