@@ -13,21 +13,24 @@ const AppCheckContext = createContext<AppCheck | undefined>(undefined);
 
 export function AppCheckProvider({ children }: { children: ReactNode }) {
   const app = useFirebaseApp();
-  const siteKey = process.env.NEXT_PUBLIC_APP_CHECK_ID;
+  const siteKey = process.env.NEXT_PUBLIC_APP_CHECK_ID!;
   const [supported, setSupported] = useState(false);
 
   useEffect(() => {
     const checkIsSupported = () => {
-      typeof window !== "undefined" ? setSupported(true) : setSupported(false);
+      typeof document !== "undefined"
+        ? setSupported(true)
+        : setSupported(false);
     };
 
+    // self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
     checkIsSupported();
   }, []);
 
   return (
     <AppCheckContext.Provider
       value={
-        siteKey && supported
+        supported
           ? initializeAppCheck(app, {
               provider: new ReCaptchaEnterpriseProvider(siteKey),
               isTokenAutoRefreshEnabled: true,
