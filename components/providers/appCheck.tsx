@@ -18,9 +18,7 @@ export function AppCheckProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const checkIsSupported = () => {
-      typeof document !== "undefined"
-        ? setSupported(true)
-        : setSupported(false);
+      typeof window !== "undefined" ? setSupported(true) : setSupported(false);
     };
 
     // self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
