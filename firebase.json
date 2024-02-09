@@ -4,7 +4,7 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "frameworksBackend": {
       "region": "us-central1",
-      "maxInstances": 1,
+      "maxInstances": 5,
       "memory": "256MiB"
     }
   }
