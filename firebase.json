@@ -1,11 +1,13 @@
 {
+  "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
   "hosting": {
     "source": ".",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "frameworksBackend": {
+      "enforceAppCheck": true,
       "region": "us-central1",
       "maxInstances": 5,
-      "memory": "256MiB"
+      "memory": "512MiB"
     }
   }
 }

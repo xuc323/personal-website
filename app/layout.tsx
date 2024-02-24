@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <ThemeProvider>
                 <AnalyticsProvider>
                   <StorageProvider>
-                    <div className="relative pb-[54px] m-0 min-h-screen transition-all bg-gradient-to-br from-stone-100 to-sky-300 dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
+                    <div className="relative m-0 min-h-screen bg-gradient-to-br from-stone-100 to-sky-300 pb-[54px] transition-all dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
                       <Navbar />
                       <main>{children}</main>
                       <Footer />
