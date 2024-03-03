@@ -4,10 +4,13 @@
     "source": ".",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "frameworksBackend": {
+      "concurrency": 80,
       "enforceAppCheck": true,
+      "maxInstances": 6,
+      "memory": "256MiB",
+      "minInstances": 0,
       "region": "us-central1",
-      "maxInstances": 5,
-      "memory": "512MiB"
+      "timeoutSeconds": 60
     }
   }
 }

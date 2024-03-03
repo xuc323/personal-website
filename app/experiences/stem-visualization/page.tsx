@@ -59,7 +59,7 @@ export default function Experience() {
           making them more approachable and understandable.
         </ParagraphContainer>
 
-        <div className="flex flex-row mb-8 p-3 justify-between items-center gap-2 max-w-md mx-auto border rounded-2xl bg-white shadow-xl">
+        <div className="mx-auto mb-8 flex max-w-md flex-row items-center justify-between gap-2 rounded-2xl border bg-white p-3 shadow-xl">
           <Image
             src="/experiences/python.svg"
             width={90}
@@ -94,7 +94,7 @@ export default function Experience() {
           simplicity and effectiveness.
         </ParagraphContainer>
 
-        <div className="max-w-xl mx-auto my-5 rounded-2xl border shadow-md overflow-hidden">
+        <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
           <StorageVideo reference="public/videos/demo.mp4" />
         </div>
 

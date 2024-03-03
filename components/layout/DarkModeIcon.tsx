@@ -44,11 +44,11 @@ export default function DarkModeIcon() {
     <button
       role="button"
       aria-label="Toggle Dark Mode"
-      className="border p-1 rounded-full w-6 flex justify-center overflow-hidden transition-all bg-white dark:bg-black hover:scale-125"
+      className="flex w-6 justify-center overflow-hidden rounded-full border bg-white p-1 transition-all hover:scale-125 dark:bg-black"
       onClick={handleClick}
     >
       <div
-        className={`flex flex-row w-20 gap-[19px] duration-300 ${
+        className={`flex w-20 flex-row gap-[19px] duration-300 ${
           mounted ? `opacity-100 ${determineTransition(theme!)}` : "opacity-0"
         }`}
       >

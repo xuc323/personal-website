@@ -1,5 +1,10 @@
+import { AppConfigDynamic } from "next/dist/build/utils";
 import { NextRequest, NextResponse } from "next/server";
 
+export const dynamic: AppConfigDynamic = "force-dynamic";
+
 export async function GET(request: NextRequest) {
-  return NextResponse.json({ blogs: [] }, { status: 200 });
+  const num = Math.random() * 100;
+
+  return NextResponse.json({ blogs: [], count: num }, { status: 200 });
 }
