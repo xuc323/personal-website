@@ -1,7 +1,7 @@
 steps:
-  - name: gcr.io/cloud-builders/node
-    args: ["ci"]
-    entrypoint: npm
+  - name: gcr.io/cloud-builders/npm
+    args:
+      - ci
   - name: gcr.io/$_NEXT_PUBLIC_PROJECT_ID/firebase
     env:
       - FIREBASE_CLI_EXPERIMENTS=webframeworks
