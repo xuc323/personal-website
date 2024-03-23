@@ -1,7 +1,6 @@
 steps:
-  - name: "gcr.io/cloud-builders/node:20"
-    args:
-      - ci
+  - name: gcr.io/cloud-builders/node
+    args: ["ci"]
     entrypoint: npm
   - name: gcr.io/$_NEXT_PUBLIC_PROJECT_ID/firebase
     env:
