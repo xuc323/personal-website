@@ -1,74 +1,49 @@
 import type { MetadataRoute } from "next";
+import { request } from "@octokit/request";
+import { Endpoints } from "@octokit/types";
+import { readdirSync } from "node:fs";
+
+export const revalidate = 60 * 60 * 24;
 
 export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
-  // TODO: use file system to read in folder as names
+  const BASE_URL = "https://www.xchen.org";
+  const FILE_PATTERN = "page.tsx";
 
-  return [
-    {
-      url: "https://www.xchen.org/",
-      lastModified: await fetchDate(""),
-    },
-    {
-      url: "https://www.xchen.org/about",
-      lastModified: await fetchDate("about/"),
-    },
-    {
-      url: "https://www.xchen.org/projects",
-      lastModified: await fetchDate("projects/"),
-    },
-    {
-      url: "https://www.xchen.org/projects/welcome-bot",
-      lastModified: await fetchDate("projects/welcome-bot/"),
-    },
-    {
-      url: "https://www.xchen.org/projects/personal-website",
-      lastModified: await fetchDate("projects/personal-website/"),
-    },
-    {
-      url: "https://www.xchen.org/projects/computer-graphics",
-      lastModified: await fetchDate("projects/computer-graphics/"),
-    },
-    {
-      url: "https://www.xchen.org/projects/music-quiz-bowl",
-      lastModified: await fetchDate("projects/music-quiz-bowl/"),
-    },
-    {
-      url: "https://www.xchen.org/experiences",
-      lastModified: await fetchDate("experiences/"),
-    },
-    {
-      url: "https://www.xchen.org/experiences/stem-visualization",
-      lastModified: await fetchDate("experiences/stem-visualization/"),
-    },
-    {
-      url: "https://www.xchen.org/experiences/technical-consultant",
-      lastModified: await fetchDate("experiences/technical-consultant/"),
-    },
-    {
-      url: "https://www.xchen.org/experiences/lehigh-grader",
-      lastModified: await fetchDate("experiences/lehigh-grader/"),
-    },
-  ];
+  const files = readdirSync("./app", {
+    recursive: true,
+    encoding: "utf-8",
+  }).filter((file) => file.endsWith(FILE_PATTERN));
+
+  return await Promise.all(
+    files.map(async (file) => {
+      return {
+        url: getUrl(file, BASE_URL, FILE_PATTERN),
+        lastModified: await fetchDate(file),
+        changeFrequency: "monthly",
+      };
+    })
+  );
 }
 
+type commitReturnType =
+  Endpoints["GET /repos/{owner}/{repo}/commits"]["response"];
+
 async function fetchDate(path: string) {
-  const data = await fetch(
-    `https://api.github.com/repos/xuc323/personal-website/commits?per_page=1&path=/app/${path}page.tsx`
-  );
-  const json:
-    | [
-        {
-          commit: {
-            url: string;
-            author: { email: string; name: string; date: string };
-          };
-        }
-      ]
-    | [] = await data.json();
+  const res = (await request({
+    method: "GET",
+    url: "/repos/{owner}/{repo}/commits?per_page=1&path=/app/{path}",
+    owner: "xuc323",
+    repo: "personal-website",
+    path: path,
+  })) as commitReturnType;
 
-  if (json.length === 0) {
-    return new Date();
-  }
+  return new Date(res.data.at(0)?.commit.author?.date!);
+}
 
-  return new Date(json.at(0)!.commit.author.date);
+function getUrl(file: string, base: string, pattern: string) {
+  const cleanedFile = file.substring(0, file.length - pattern.length);
+
+  const url = `${base}/${cleanedFile}`;
+
+  return url.endsWith("/") ? url.slice(0, -1) : url;
 }
