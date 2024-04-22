@@ -11,29 +11,29 @@
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.1.4",
-    "@octokit/request": "^9.0.1",
+    "@next/mdx": "^14.2.2",
+    "@octokit/request": "^9.1.1",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
-    "next": "^14.1.4",
+    "next": "^14.2.2",
     "next-themes": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^5.0.1"
+    "react-icons": "^5.1.0"
   },
   "devDependencies": {
     "@octokit/types": "^12.6.0",
-    "@types/mdx": "^2.0.12",
-    "@types/node": "^20.11.30",
-    "@types/react": "^18.2.70",
-    "@types/react-dom": "^18.2.22",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.1.4",
+    "eslint-config-next": "^14.2.2",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.12",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.4.3"
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
   }
 }
