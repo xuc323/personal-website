@@ -3,9 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "./providers";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Xu Chen",
@@ -14,7 +11,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Xu Chen" }],
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
@@ -25,8 +26,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Footer />
           </div>
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

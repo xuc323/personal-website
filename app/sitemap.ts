@@ -3,8 +3,6 @@ import { request } from "@octokit/request";
 import { Endpoints } from "@octokit/types";
 import { readdirSync } from "node:fs";
 
-export const revalidate = 60 * 60 * 24;
-
 export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
   const BASE_URL = "https://www.xchen.org";
   const FILE_PATTERN = "page.tsx";
