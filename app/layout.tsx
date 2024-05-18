@@ -3,12 +3,17 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "./providers";
+import { BASE_URL } from "@/components/Constants";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: "Xu Chen",
   keywords: ["Personal Website", "Experiences", "Web Development", "Projects"],
   description: "Get to know Xu Chen.",
   authors: [{ name: "Xu Chen" }],
+  alternates: {
+    canonical: "./",
+  },
 };
 
 export default function RootLayout({

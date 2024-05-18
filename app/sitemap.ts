@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 import { request } from "@octokit/request";
 import { Endpoints } from "@octokit/types";
 import { readdirSync } from "node:fs";
+import { BASE_URL } from "@/components/Constants";
 
 export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
-  const BASE_URL = "https://www.xchen.org";
   const FILE_PATTERN = "page.tsx";
 
   const files = readdirSync("./app", {
