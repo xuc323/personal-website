@@ -3,18 +3,24 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "./providers";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { ReactNode } from "react";
+import { BASE_URL } from "@/components/Constants";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: "Xu Chen",
   keywords: ["Personal Website", "Experiences", "Web Development", "Projects"],
   description: "Get to know Xu Chen.",
   authors: [{ name: "Xu Chen" }],
+  alternates: {
+    canonical: "./",
+  },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
@@ -25,8 +31,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Footer />
           </div>
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
