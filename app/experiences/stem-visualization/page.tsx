@@ -95,7 +95,10 @@ export default function Experience() {
 
         <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
           <video muted controls>
-            <source src="/experiences/demo.mp4" type="video/mp4" />
+            <source
+              src="https://github.com/xuc323/personal-website/raw/main/assets/experiences/demo.mp4"
+              type="video/mp4"
+            />
             Video is not supported by your browser.
           </video>
         </div>

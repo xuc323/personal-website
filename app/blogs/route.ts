@@ -1,8 +1,6 @@
-import type { ServerRuntime } from "next";
 import { NextRequest, NextResponse } from "next/server";
 
-export const dynamic = "force-dynamic";
-export const runtime: ServerRuntime = "edge";
+export const runtime = "edge";
 
 export async function GET(request: NextRequest) {
   const num = Math.random() * 100;
