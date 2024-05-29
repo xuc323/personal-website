@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 export default function NotFound() {
   return (
     <div className="flex h-72 flex-col items-center justify-center">
