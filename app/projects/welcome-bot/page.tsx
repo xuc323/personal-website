@@ -34,8 +34,8 @@ export default function Project() {
       <PageContainer>
         <Image
           src="/projects/bot_logo.jpg"
-          width={150}
-          height={180}
+          width={1439 / 9.5}
+          height={1750 / 9.5}
           alt="An image of a robot"
           className="mx-auto mb-5 rounded-2xl border p-1 shadow-lg"
         />
@@ -75,8 +75,8 @@ export default function Project() {
 
         <Image
           src="/projects/bot_info.png"
-          width={600}
-          height={400}
+          width={1131 / 2}
+          height={719 / 2}
           alt="Screenshot of the Welcome Bot's profile on Discord"
           className="mx-auto my-6 rounded-2xl border p-1 shadow-lg"
         />

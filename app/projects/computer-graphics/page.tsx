@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Computer Graphics",
     "Lehigh University",
     "WebGL",
-    "JJavaScript programming",
+    "JavaScript programming",
     "Web Development",
     "graphic rendering",
     "pixel coloration",
