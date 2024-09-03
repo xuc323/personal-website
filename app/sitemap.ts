@@ -1,8 +1,8 @@
-import type { MetadataRoute } from "next";
+import { BASE_URL } from "@/components/Constants";
 import { request } from "@octokit/request";
 import { Endpoints } from "@octokit/types";
+import type { MetadataRoute } from "next";
 import { readdirSync } from "node:fs";
-import { BASE_URL } from "@/components/Constants";
 
 export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
   const FILE_PATTERN = "page.tsx";
