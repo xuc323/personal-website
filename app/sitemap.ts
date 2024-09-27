@@ -35,7 +35,12 @@ async function fetchDate(path: string) {
     path: path,
   })) as commitReturnType;
 
-  return new Date(res.data.at(0)?.commit.author?.date!);
+  const commitDate = res.data.at(0)?.commit.author?.date;
+  if (!commitDate) {
+    return new Date();
+  }
+
+  return new Date(commitDate);
 }
 
 function getUrl(file: string, base: string, pattern: string) {
