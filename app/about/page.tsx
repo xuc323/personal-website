@@ -1,3 +1,4 @@
+import { ASSETS_URL } from "@/components/Constants";
 import { PageContainer } from "@/components/ContainerUtils";
 import { ParagraphContainer, TitleContainer } from "@/components/TextUtils";
 import type { Metadata } from "next";
@@ -26,7 +27,12 @@ export default function About() {
           className="float-right m-5 p-5"
           aria-label="lehigh university"
         >
-          <Image src="/lehigh.png" width={300} height={65} alt="lehigh" />
+          <Image
+            src={`${ASSETS_URL}/lehigh.png`}
+            width={300}
+            height={65}
+            alt="lehigh"
+          />
         </Link>
         <ParagraphContainer>Hello! Glad you are here!</ParagraphContainer>
         <ParagraphContainer>
