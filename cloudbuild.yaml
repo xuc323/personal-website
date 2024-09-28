@@ -18,8 +18,8 @@ images:
   - ${LOCATION}-docker.pkg.dev/${PROJECT_ID}/images/${REPO_NAME}:${COMMIT_SHA}
   - ${LOCATION}-docker.pkg.dev/${PROJECT_ID}/images/${REPO_NAME}:latest
 substitutions:
-  - _BASE_URL: NONE
-  - _ASSETS_HOSTNAME: NONE
-  - _ASSETS_PATHNAME: NONE
+  _BASE_URL: NONE
+  _ASSETS_HOSTNAME: NONE
+  _ASSETS_PATHNAME: NONE
 options:
   logging: CLOUD_LOGGING_ONLY
