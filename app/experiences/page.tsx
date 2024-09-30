@@ -22,7 +22,7 @@ export default function Experience() {
 
   return (
     <div className="py-3">
-      <h1 className="text-center text-4xl text-black font-bold dark:text-white">
+      <h1 className="text-center text-4xl font-bold text-black dark:text-white">
         Experiences
       </h1>
       <CardList items={itemList} />

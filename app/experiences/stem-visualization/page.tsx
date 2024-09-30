@@ -1,4 +1,3 @@
-import { ASSETS_URL } from "@/components/Constants";
 import { PageContainer } from "@/components/ContainerUtils";
 import {
   HeadParagraphContainer,
@@ -61,13 +60,13 @@ export default function Experience() {
 
         <div className="mx-auto mb-8 flex max-w-md flex-row items-center justify-between gap-2 rounded-2xl border bg-white p-3 shadow-xl">
           <Image
-            src={`${ASSETS_URL}/experiences/python.svg`}
+            src="/experiences/python.svg"
             width={90}
             height={99}
             alt="python icon"
           />
           <Image
-            src={`${ASSETS_URL}/experiences/scikit_learn.svg`}
+            src="/experiences/scikit_learn.svg"
             width={90}
             height={49}
             alt="scikit-learn icon"
@@ -96,10 +95,7 @@ export default function Experience() {
 
         <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
           <video muted controls className="w-full">
-            <source
-              src={`${ASSETS_URL}/experiences/demo.mp4`}
-              type="video/mp4"
-            />
+            <source src="/experiences/demo.mp4" type="video/mp4" />
             Video is not supported by your browser.
           </video>
         </div>
