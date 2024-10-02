@@ -7,15 +7,22 @@ export const metadata: Metadata = {
 };
 
 export default function Experience() {
+  const baseUrl = "/experiences";
+
   const itemList: CardItemProps[] = [
     {
-      link: "/experiences/stem-visualization",
+      link: `${baseUrl}/stem-visualization`,
       name: "STEM Visualization",
       preview: "",
     },
     {
-      link: "/experiences/lehigh-grader",
+      link: `${baseUrl}/lehigh-grader`,
       name: "CS Teaching Assistant / Grader",
+      preview: "",
+    },
+    {
+      link: `${baseUrl}/technical-consultant`,
+      name: "Technical Consultant",
       preview: "",
     },
   ];
