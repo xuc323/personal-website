@@ -21,7 +21,7 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@octokit/types": "^13.6.0",
+    "@octokit/types": "^13.6.1",
     "@types/mdx": "^2.0.13",
     "@types/node": "^22.7.4",
     "@types/react": "^18.3.11",
