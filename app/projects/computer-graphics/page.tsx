@@ -1,3 +1,4 @@
+import { ASSETS_URL } from "@/components/Constants";
 import {
   GroupImageContainer,
   PageContainer,
@@ -47,20 +48,20 @@ export default function Project() {
         </p>
         <GroupImageContainer>
           <Image
-            src="/projects/html.svg"
+            src={`${ASSETS_URL}/projects/html.svg`}
             width={90}
             height={90}
             alt="html logo"
           />
           <Image
-            src="/projects/javascript.svg"
+            src={`${ASSETS_URL}/projects/javascript.svg`}
             width={90}
             height={90}
             alt="javascript logo"
             className="rounded-2xl"
           />
           <Image
-            src="/projects/webgl.svg"
+            src={`${ASSETS_URL}/projects/webgl.svg`}
             width={90}
             height={38}
             alt="webgl logo"

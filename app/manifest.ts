@@ -1,3 +1,4 @@
+import { ASSETS_URL } from "@/components/Constants";
 import type { MetadataRoute } from "next";
 
 export default function Manifest(): MetadataRoute.Manifest {
@@ -10,12 +11,12 @@ export default function Manifest(): MetadataRoute.Manifest {
     background_color: "#ffffff",
     icons: [
       {
-        src: "/android-chrome-192x192.png",
+        src: `${ASSETS_URL}/android-chrome-192x192.png`,
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/android-chrome-512x512.png",
+        src: `${ASSETS_URL}/android-chrome-512x512.png`,
         sizes: "512x512",
         type: "image/png",
       },

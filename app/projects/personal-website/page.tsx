@@ -1,3 +1,4 @@
+import { ASSETS_URL } from "@/components/Constants";
 import {
   GroupImageContainer,
   PageContainer,
@@ -55,20 +56,20 @@ export default function Project() {
 
         <GroupImageContainer>
           <Image
-            src="/projects/react.svg"
+            src={`${ASSETS_URL}/projects/react.svg`}
             width={90}
             height={80}
             alt="reactjs icon"
           />
           <Image
-            src="/projects/next.svg"
+            src={`${ASSETS_URL}/projects/next.svg`}
             width={90}
             height={90}
             alt="nextjs icon"
             className="rounded-full border bg-white"
           />
           <Image
-            src="/projects/tailwind.svg"
+            src={`${ASSETS_URL}/projects/tailwind.svg`}
             width={90}
             height={90}
             alt="tailwind icon"

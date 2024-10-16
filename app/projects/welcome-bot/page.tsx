@@ -1,3 +1,4 @@
+import { ASSETS_URL } from "@/components/Constants";
 import { PageContainer } from "@/components/ContainerUtils";
 import {
   HeadParagraphContainer,
@@ -33,7 +34,7 @@ export default function Project() {
 
       <PageContainer>
         <Image
-          src="/projects/bot_logo.jpg"
+          src={`${ASSETS_URL}/projects/bot_logo.jpg`}
           width={1439 / 9.5}
           height={1750 / 9.5}
           alt="An image of a robot"
@@ -74,7 +75,7 @@ export default function Project() {
         </ParagraphContainer>
 
         <Image
-          src="/projects/bot_info.png"
+          src={`${ASSETS_URL}/projects/bot_info.png`}
           width={1131 / 2}
           height={719 / 2}
           alt="Screenshot of the Welcome Bot's profile on Discord"

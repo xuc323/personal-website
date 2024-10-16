@@ -1,3 +1,4 @@
+import { ASSETS_URL } from "@/components/Constants";
 import {
   GroupImageContainer,
   PageContainer,
@@ -23,20 +24,20 @@ export default function Project() {
 
         <GroupImageContainer>
           <Image
-            src="/projects/javascript.svg"
+            src={`${ASSETS_URL}/projects/javascript.svg`}
             width={90}
             height={90}
             alt="javascript logo"
             className="rounded-2xl"
           />
           <Image
-            src="/projects/vue.svg"
+            src={`${ASSETS_URL}/projects/vue.svg`}
             width={90}
             height={78}
             alt="vuejs logo"
           />
           <Image
-            src="/projects/expressjs.png"
+            src={`${ASSETS_URL}/projects/expressjs.png`}
             width={100}
             height={30}
             alt="expressjs logo"
@@ -57,14 +58,14 @@ export default function Project() {
 
         <GroupImageContainer>
           <Image
-            src="/projects/mongodb.svg"
+            src={`${ASSETS_URL}/projects/mongodb.svg`}
             width={200}
             height={50}
             alt="mongodb logo"
             className="w-5/12"
           />
           <Image
-            src="/projects/firebase.svg"
+            src={`${ASSETS_URL}/projects/firebase.svg`}
             width={180}
             height={50}
             alt="firebase logo"
