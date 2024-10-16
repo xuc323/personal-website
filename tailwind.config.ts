@@ -7,7 +7,16 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        "wipe-in-out": {
+          "0%": { "stroke-dashoffset": "400" },
+          "50%": { "stroke-dashoffset": "0" },
+          "100%": { "stroke-dashoffset": "400" },
+        },
+      },
+      animation: { "wipe-in-out": "wipe-in-out 10s ease-in-out infinite" },
+    },
   },
   plugins: [],
   darkMode: "class",
