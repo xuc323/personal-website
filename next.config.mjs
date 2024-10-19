@@ -1,3 +1,7 @@
+import mdx from "@next/mdx";
+
+const withMDX = mdx();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -11,8 +15,9 @@ const nextConfig = {
       },
     ],
   },
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   compress: false,
   output: "standalone",
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);
