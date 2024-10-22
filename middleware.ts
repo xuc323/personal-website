@@ -1,6 +1,7 @@
-import { MiddlewareConfig, NextRequest, NextResponse } from "next/server";
+import type { MiddlewareConfig } from "next/server";
+import { NextResponse } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function middleware() {
   return NextResponse.json("Not found.", { status: 404 });
 }
 
