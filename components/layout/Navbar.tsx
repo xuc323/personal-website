@@ -82,6 +82,17 @@ export default function Navbar() {
           </li>
           <li className="text-center">
             <Link
+              href="/blogs"
+              className={`inline-block items-center p-2 text-center no-underline transition-all ${
+                path === "blogs" && "rounded-2xl bg-gray-300 dark:bg-gray-700"
+              } hover:text-black dark:hover:text-white max-sm:w-full`}
+              onClick={() => setIsOpen(false)}
+            >
+              Blog
+            </Link>
+          </li>
+          <li className="text-center">
+            <Link
               href="/about"
               className={`inline-block w-20 items-center p-2 text-center no-underline transition-all ${
                 path === "about" && "rounded-2xl bg-gray-300 dark:bg-gray-700"
