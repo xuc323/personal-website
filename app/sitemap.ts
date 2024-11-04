@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/components/Constants";
+import { BASE_URL } from "@/constants";
 import { request } from "@octokit/request";
 import { Endpoints } from "@octokit/types";
 import type { MetadataRoute } from "next";

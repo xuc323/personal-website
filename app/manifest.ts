@@ -1,4 +1,4 @@
-import { ASSETS_URL } from "@/components/Constants";
+import { ASSETS_URL } from "@/constants";
 import type { MetadataRoute } from "next";
 
 export default function Manifest(): MetadataRoute.Manifest {

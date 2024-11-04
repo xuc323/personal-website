@@ -49,7 +49,7 @@ export default function DarkModeIcon() {
     >
       <div
         className={`flex w-20 flex-row gap-[19px] duration-300 ${
-          mounted ? `opacity-100 ${determineTransition(theme!)}` : "opacity-0"
+          mounted ? `opacity-100 ${determineTransition(theme)}` : "opacity-0"
         }`}
       >
         <BsSunFill size={14} />
@@ -66,7 +66,7 @@ export default function DarkModeIcon() {
  * @param theme "system" | "light" | "dark"
  * @returns translation
  */
-function determineTransition(theme: string): string {
+function determineTransition(theme?: string): string {
   switch (theme) {
     case "light":
       return "translate-x-[33px]";

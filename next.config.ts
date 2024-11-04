@@ -1,5 +1,6 @@
 import mdx from "@next/mdx";
 import type { NextConfig } from "next";
+import { ASSETS_DOMAIN, ASSETS_PATH } from "./constants";
 
 const withMDX = mdx();
 
@@ -8,9 +9,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "static.xchen.org",
+        hostname: ASSETS_DOMAIN,
         port: "",
-        pathname: "/5552da8504271da967caf6b57acc69e5/public/**",
+        pathname: `${ASSETS_PATH}/**`,
         search: "",
       },
     ],

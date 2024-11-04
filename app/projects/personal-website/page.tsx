@@ -1,4 +1,3 @@
-import { ASSETS_URL } from "@/components/Constants";
 import {
   GroupImageContainer,
   PageContainer,
@@ -8,6 +7,7 @@ import {
   ParagraphContainer,
   TitleContainer,
 } from "@/components/TextUtils";
+import { ASSETS_URL } from "@/constants";
 import type { Metadata } from "next";
 import Image from "next/image";
 

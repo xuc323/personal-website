@@ -1,6 +1,6 @@
-import { BASE_URL } from "@/components/Constants";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import { BASE_URL } from "@/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
