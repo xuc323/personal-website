@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: ASSETS_DOMAIN,
         port: "",
-        pathname: `${ASSETS_PATH}/**`,
+        pathname: `/${ASSETS_PATH}/**`,
         search: "",
       },
     ],
