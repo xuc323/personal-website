@@ -3,7 +3,6 @@ import {
   PageContainer,
 } from "@/components/ContainerUtils";
 import { TitleContainer } from "@/components/TextUtils";
-import { ASSETS_URL } from "@/constants";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,20 +47,20 @@ export default function Project() {
         </p>
         <GroupImageContainer>
           <Image
-            src={`${ASSETS_URL}/projects/html.svg`}
+            src="/projects/html.svg"
             width={90}
             height={90}
             alt="html logo"
           />
           <Image
-            src={`${ASSETS_URL}/projects/javascript.svg`}
+            src="/projects/javascript.svg"
             width={90}
             height={90}
             alt="javascript logo"
             className="rounded-2xl"
           />
           <Image
-            src={`${ASSETS_URL}/projects/webgl.svg`}
+            src="/projects/webgl.svg"
             width={90}
             height={38}
             alt="webgl logo"

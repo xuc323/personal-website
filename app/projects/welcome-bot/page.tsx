@@ -4,7 +4,6 @@ import {
   ParagraphContainer,
   TitleContainer,
 } from "@/components/TextUtils";
-import { ASSETS_URL } from "@/constants";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -34,7 +33,7 @@ export default function Project() {
 
       <PageContainer>
         <Image
-          src={`${ASSETS_URL}/projects/bot_logo.jpg`}
+          src="/projects/bot_logo.jpg"
           width={1439 / 9.5}
           height={1750 / 9.5}
           alt="An image of a robot"
@@ -75,7 +74,7 @@ export default function Project() {
         </ParagraphContainer>
 
         <Image
-          src={`${ASSETS_URL}/projects/bot_info.png`}
+          src="/projects/bot_info.png"
           width={1131 / 2}
           height={719 / 2}
           alt="Screenshot of the Welcome Bot's profile on Discord"

@@ -7,7 +7,6 @@ import {
   ParagraphContainer,
   TitleContainer,
 } from "@/components/TextUtils";
-import { ASSETS_URL } from "@/constants";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -56,20 +55,20 @@ export default function Project() {
 
         <GroupImageContainer>
           <Image
-            src={`${ASSETS_URL}/projects/react.svg`}
+            src="/projects/react.svg"
             width={90}
             height={80}
             alt="reactjs icon"
           />
           <Image
-            src={`${ASSETS_URL}/projects/next.svg`}
+            src="/projects/next.svg"
             width={90}
             height={90}
             alt="nextjs icon"
             className="rounded-full border bg-white"
           />
           <Image
-            src={`${ASSETS_URL}/projects/tailwind.svg`}
+            src="/projects/tailwind.svg"
             width={90}
             height={90}
             alt="tailwind icon"

@@ -3,7 +3,6 @@ import {
   PageContainer,
 } from "@/components/ContainerUtils";
 import { TitleContainer } from "@/components/TextUtils";
-import { ASSETS_URL } from "@/constants";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -24,20 +23,20 @@ export default function Project() {
 
         <GroupImageContainer>
           <Image
-            src={`${ASSETS_URL}/projects/javascript.svg`}
+            src="/projects/javascript.svg"
             width={90}
             height={90}
             alt="javascript logo"
             className="rounded-2xl"
           />
           <Image
-            src={`${ASSETS_URL}/projects/vue.svg`}
+            src="/projects/vue.svg"
             width={90}
             height={78}
             alt="vuejs logo"
           />
           <Image
-            src={`${ASSETS_URL}/projects/expressjs.png`}
+            src="/projects/expressjs.png"
             width={100}
             height={30}
             alt="expressjs logo"
@@ -58,14 +57,14 @@ export default function Project() {
 
         <GroupImageContainer>
           <Image
-            src={`${ASSETS_URL}/projects/mongodb.svg`}
+            src="/projects/mongodb.svg"
             width={200}
             height={50}
             alt="mongodb logo"
             className="w-5/12"
           />
           <Image
-            src={`${ASSETS_URL}/projects/firebase.svg`}
+            src="/projects/firebase.svg"
             width={180}
             height={50}
             alt="firebase logo"
