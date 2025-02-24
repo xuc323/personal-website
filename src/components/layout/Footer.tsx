@@ -9,7 +9,7 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <footer className="absolute bottom-0 w-full border-t-2 bg-gray-100 pb-4 pt-3 text-center font-serif text-black max-sm:px-2 dark:bg-black dark:text-white">
+    <footer className="absolute bottom-0 w-full border-t-2 border-gray-200 bg-gray-100 pt-3 pb-4 text-center font-serif text-black max-sm:px-2 dark:bg-black dark:text-white">
       <div className="mx-auto flex max-w-4xl items-center justify-between px-2 text-center">
         <div className="flex w-1/12 justify-start">
           <DarkModeIcon />

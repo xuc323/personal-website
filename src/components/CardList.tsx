@@ -8,7 +8,7 @@ export type CardItemProps = {
 
 export default function CardList({ items }: { items: CardItemProps[] }) {
   return (
-    <div className="mx-auto mt-8 w-10/12 max-w-3xl rounded-2xl bg-white shadow-lg duration-300 dark:bg-black max-sm:w-full max-sm:shadow-none">
+    <div className="mx-auto mt-8 w-10/12 max-w-3xl rounded-2xl bg-white shadow-lg duration-300 max-sm:w-full max-sm:shadow-none dark:bg-black">
       <ul className="grid grid-cols-2 p-5 max-md:grid-cols-2 max-sm:grid-cols-1">
         {items.map((item, index) => {
           return (

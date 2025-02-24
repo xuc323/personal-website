@@ -7,9 +7,9 @@ import { readdirSync } from "node:fs";
 export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
   const FILE_PATTERN = "page.tsx";
 
-  const files = readdirSync("./app", {
+  const files = readdirSync("./src/app", {
     recursive: true,
-    encoding: "utf-8",
+    encoding: "utf-8"
   }).filter((file) => file.endsWith(FILE_PATTERN));
 
   return await Promise.all(
@@ -17,7 +17,7 @@ export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
       return {
         url: getUrl(file, BASE_URL, FILE_PATTERN),
         lastModified: await fetchDate(file),
-        changeFrequency: "monthly",
+        changeFrequency: "monthly"
       };
     })
   );
@@ -32,7 +32,7 @@ async function fetchDate(path: string) {
     url: "/repos/{owner}/{repo}/commits?per_page=1&path=/app/{path}",
     owner: "xuc323",
     repo: "personal-website",
-    path: path,
+    path: path
   })) as commitReturnType;
 
   const commitDate = res.data.at(0)?.commit.author?.date;
