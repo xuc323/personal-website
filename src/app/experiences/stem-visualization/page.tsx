@@ -2,7 +2,7 @@ import { PageContainer } from "@/components/ContainerUtils";
 import {
   HeadParagraphContainer,
   ParagraphContainer,
-  TitleContainer,
+  TitleContainer
 } from "@/components/TextUtils";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     "Bokeh module",
     "Scikit-learn",
     "machine learning in education",
-    "data science for beginners",
-  ],
+    "data science for beginners"
+  ]
 };
 
 export default function Experience() {
@@ -95,7 +95,10 @@ export default function Experience() {
 
         <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
           <video muted controls className="w-full">
-            <source src="/experiences/demo.mp4" type="video/mp4" />
+            <source
+              src="https://raw.githubusercontent.com/xuc323/personal-website/main/assets/experiences/demo.mp4"
+              type="video/mp4"
+            />
             Video is not supported by your browser.
           </video>
         </div>
