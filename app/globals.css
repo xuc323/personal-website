@@ -1,3 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --animate-wipe-in-out: wipe-in-out 10s ease-in-out infinite;
+
+  @keyframes wipe-in-out {
+    0% {
+      stroke-dashoffset: 400;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 400;
+    }
+  }
+}

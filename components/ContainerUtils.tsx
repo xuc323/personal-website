@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export function PageContainer({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <div className="m-8 mx-auto w-10/12 max-w-3xl rounded-2xl bg-white p-5 shadow-lg duration-300 dark:bg-black max-sm:w-full max-sm:shadow-none">
+    <div className="m-8 mx-auto w-10/12 max-w-3xl rounded-2xl bg-white p-5 shadow-lg duration-300 max-sm:w-full max-sm:shadow-none dark:bg-black">
       {children}
     </div>
   );

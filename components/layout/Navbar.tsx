@@ -14,7 +14,7 @@ export default function Navbar() {
   const path = useSelectedLayoutSegment();
 
   return (
-    <header className="sticky top-0 w-full border-b-2 bg-white font-serif dark:bg-black">
+    <header className="sticky top-0 w-full border-b-2 border-gray-200 bg-white font-serif dark:bg-black">
       <nav className="mx-auto flex max-w-4xl items-center justify-between gap-8 p-2 max-sm:flex-col max-sm:gap-0">
         <div className="flex w-full items-center justify-between">
           <Link href="/" className="px-3">
@@ -52,7 +52,7 @@ export default function Navbar() {
         </div>
         {/* Full menu */}
         <ul
-          className={`m-0 flex list-none gap-4 p-0 text-gray-500 dark:text-gray-200 max-sm:pt-2 ${
+          className={`m-0 flex list-none gap-4 p-0 text-gray-500 max-sm:pt-2 dark:text-gray-200 ${
             isOpen ? "max-sm:max-h-40" : "max-sm:max-h-0"
           } transition-all duration-500 max-sm:block max-sm:w-full max-sm:overflow-hidden`}
         >
@@ -62,7 +62,7 @@ export default function Navbar() {
               className={`inline-block w-20 items-center p-2 text-center no-underline transition-all ${
                 path === "projects" &&
                 "rounded-2xl bg-gray-300 dark:bg-gray-700"
-              } hover:text-black dark:hover:text-white max-sm:w-full`}
+              } hover:text-black max-sm:w-full dark:hover:text-white`}
               onClick={() => setIsOpen(false)}
             >
               Project
@@ -74,7 +74,7 @@ export default function Navbar() {
               className={`inline-block items-center p-2 text-center no-underline transition-all ${
                 path === "experiences" &&
                 "rounded-2xl bg-gray-300 dark:bg-gray-700"
-              } hover:text-black dark:hover:text-white max-sm:w-full`}
+              } hover:text-black max-sm:w-full dark:hover:text-white`}
               onClick={() => setIsOpen(false)}
             >
               Experience
@@ -85,7 +85,7 @@ export default function Navbar() {
               href="/blogs"
               className={`inline-block items-center p-2 text-center no-underline transition-all ${
                 path === "blogs" && "rounded-2xl bg-gray-300 dark:bg-gray-700"
-              } hover:text-black dark:hover:text-white max-sm:w-full`}
+              } hover:text-black max-sm:w-full dark:hover:text-white`}
               onClick={() => setIsOpen(false)}
             >
               Blog
@@ -96,7 +96,7 @@ export default function Navbar() {
               href="/about"
               className={`inline-block w-20 items-center p-2 text-center no-underline transition-all ${
                 path === "about" && "rounded-2xl bg-gray-300 dark:bg-gray-700"
-              } hover:text-black dark:hover:text-white max-sm:w-full`}
+              } hover:text-black max-sm:w-full dark:hover:text-white`}
               onClick={() => setIsOpen(false)}
             >
               About
