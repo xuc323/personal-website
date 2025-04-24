@@ -93,13 +93,6 @@ export default function Experience() {
           simplicity and effectiveness.
         </ParagraphContainer>
 
-        <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
-          <video muted controls className="w-full">
-            <source src="/experiences/demo.mp4" type="video/mp4" />
-            Video is not supported by your browser.
-          </video>
-        </div>
-
         <HeadParagraphContainer>
           Interactive Learning through Data Science Techniques
         </HeadParagraphContainer>
@@ -130,6 +123,67 @@ export default function Experience() {
           >
             Access the Application Here
           </Link>
+        </div>
+
+        <HeadParagraphContainer>Demo Videos</HeadParagraphContainer>
+        <ParagraphContainer>Description</ParagraphContainer>
+        <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
+          <video muted controls className="w-full">
+            <source src="/experiences/description.mp4" type="video/mp4" />
+            Video is not supported by your browser.
+          </video>
+        </div>
+
+        <ParagraphContainer>Data Exploration</ParagraphContainer>
+        <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
+          <video muted controls className="w-full">
+            <source src="/experiences/data-exploration.mp4" type="video/mp4" />
+            Video is not supported by your browser.
+          </video>
+        </div>
+
+        <ParagraphContainer>Correlation Matrix</ParagraphContainer>
+        <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
+          <video muted controls className="w-full">
+            <source
+              src="/experiences/correlation-matrix.mp4"
+              type="video/mp4"
+            />
+            Video is not supported by your browser.
+          </video>
+        </div>
+
+        <ParagraphContainer>Multivariable Regression</ParagraphContainer>
+        <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
+          <video muted controls className="w-full">
+            <source
+              src="/experiences/multivariable-regression.mp4"
+              type="video/mp4"
+            />
+            Video is not supported by your browser.
+          </video>
+        </div>
+
+        <ParagraphContainer>Unsupervised Learning</ParagraphContainer>
+        <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
+          <video muted controls className="w-full">
+            <source
+              src="/experiences/unsupervised-learning.mp4"
+              type="video/mp4"
+            />
+            Video is not supported by your browser.
+          </video>
+        </div>
+
+        <ParagraphContainer>Classification Methods</ParagraphContainer>
+        <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
+          <video muted controls className="w-full">
+            <source
+              src="/experiences/classification-methods.mp4"
+              type="video/mp4"
+            />
+            Video is not supported by your browser.
+          </video>
         </div>
       </PageContainer>
     </div>
