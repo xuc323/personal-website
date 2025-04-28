@@ -34,7 +34,7 @@
     "@opennextjs/cloudflare": "^1.0.0-beta.3",
     "@tailwindcss/postcss": "^4.1.4",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^22.14.1",
+    "@types/node": "^22.15.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "eslint": "^9.25.1",
