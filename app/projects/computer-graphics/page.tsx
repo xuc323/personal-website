@@ -76,15 +76,14 @@ export default function Project() {
           triangles, and lightings are the calculation of trigonometry, which
           involves a lot of calculus knowledge.
         </p>
-        <p className="m-3 py-2 text-black dark:text-white">
-          The web page is now hosted on{" "}
+        <div className="text-center">
           <Link
             href="https://computer-graphics.xchen.org"
-            className="text-blue-500"
+            className="text-blue-500 underline hover:text-blue-800"
           >
-            GitHub Pages.
+            Access the Website Here
           </Link>
-        </p>
+        </div>
       </PageContainer>
     </div>
   );
