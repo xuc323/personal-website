@@ -4,6 +4,7 @@ import {
   ParagraphContainer,
   TitleContainer,
 } from "@/components/TextUtils";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -35,14 +36,14 @@ export const metadata: Metadata = {
   ],
 };
 
-const stemVideoArray = [
-  "description",
-  "data-exploration",
-  "correlation-matrix",
-  "multivariable-regression",
-  "unsupervised-learning",
-  "classification-methods",
-];
+const stemVideos = {
+  description: "Description",
+  data_exploration: "Data Exploration",
+  correlation_matrix: "Correlation Matrix",
+  multivariable_regression: "Multivariable Regression",
+  unsupervised_learning: "Unsupervised Learning",
+  classification_methods: "Classification Methods",
+};
 
 export default function Experience() {
   return (
@@ -74,26 +75,28 @@ export default function Experience() {
           making them more approachable and understandable.
         </ParagraphContainer>
 
-        <div className="mx-auto mb-8 flex max-w-md flex-row items-center justify-between gap-2 rounded-2xl border bg-white p-3 shadow-xl">
-          <Image
-            src="/experiences/python.svg"
-            width={90}
-            height={99}
-            alt="python icon"
-          />
-          <Image
-            src="/experiences/scikit_learn.svg"
-            width={90}
-            height={49}
-            alt="scikit-learn icon"
-          />
-          <Image
-            src="/experiences/bokeh.svg"
-            width={90}
-            height={26}
-            alt="bokeh icon"
-          />
-        </div>
+        <Card className="mb-8 shadow-xl">
+          <CardContent className="flex flex-row items-center justify-center gap-20">
+            <Image
+              src="/experiences/python.svg"
+              width={90}
+              height={99}
+              alt="python icon"
+            />
+            <Image
+              src="/experiences/scikit_learn.svg"
+              width={90}
+              height={49}
+              alt="scikit-learn icon"
+            />
+            <Image
+              src="/experiences/bokeh.svg"
+              width={90}
+              height={26}
+              alt="bokeh icon"
+            />
+          </CardContent>
+        </Card>
 
         <HeadParagraphContainer>
           Developing Educational Tools with Chemistry and Machine Learning
@@ -109,24 +112,29 @@ export default function Experience() {
           simplicity and effectiveness.
         </ParagraphContainer>
 
-        <div className="mx-auto w-10/12">
+        <div className="mx-auto mb-8 w-10/12">
           <Carousel
             orientation="horizontal"
             opts={{ loop: true, align: "center" }}
             className="w-full"
           >
             <CarouselContent>
-              {stemVideoArray.map((value, index) => (
+              {Object.entries(stemVideos).map(([key, value], index) => (
                 <CarouselItem key={index}>
-                  <div className="mx-auto my-5 max-w-xl overflow-hidden rounded-2xl border shadow-md">
-                    <video muted controls className="w-full">
-                      <source
-                        src={`/experiences/${value}.mp4`}
-                        type="video/mp4"
-                      />
-                      Video is not supported by your browser.
-                    </video>
-                  </div>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>{value}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <video muted controls className="w-full">
+                        <source
+                          src={`/experiences/${key}.mp4`}
+                          type="video/mp4"
+                        />
+                        Video is not supported by your browser.
+                      </video>
+                    </CardContent>
+                  </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>

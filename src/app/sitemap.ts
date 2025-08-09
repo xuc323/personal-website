@@ -4,18 +4,18 @@ import { Endpoints } from "@octokit/types";
 import type { MetadataRoute } from "next";
 import { readdirSync } from "node:fs";
 
-export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
-  const FILE_PATTERN = "page.tsx";
+const FILE_PATTERN = /page\.(ts|tsx|md|mdx)$/;
 
-  const files = readdirSync("./app", {
+export default async function Sitemap(): Promise<MetadataRoute.Sitemap> {
+  const files = readdirSync("./src/app", {
     recursive: true,
     encoding: "utf-8",
-  }).filter((file) => file.endsWith(FILE_PATTERN));
+  }).filter((file) => FILE_PATTERN.test(file));
 
   return await Promise.all(
     files.map(async (file) => {
       return {
-        url: getUrl(file, BASE_URL, FILE_PATTERN),
+        url: getUrl(file, BASE_URL),
         lastModified: await fetchDate(file),
         changeFrequency: "monthly",
       };
@@ -29,7 +29,7 @@ type commitReturnType =
 async function fetchDate(path: string) {
   const res = (await request({
     method: "GET",
-    url: "/repos/{owner}/{repo}/commits?per_page=1&path=/app/{path}",
+    url: "/repos/{owner}/{repo}/commits?per_page=1&path=/src/app/{path}",
     owner: "xuc323",
     repo: "personal-website",
     path: path,
@@ -43,10 +43,10 @@ async function fetchDate(path: string) {
   return new Date(commitDate);
 }
 
-function getUrl(file: string, base: string, pattern: string) {
-  const cleanedFile = file.substring(0, file.length - pattern.length);
+function getUrl(file: string, base: string) {
+  const cleanedFile = file.replace(FILE_PATTERN, "");
 
-  const url = `${base}/${cleanedFile}`;
+  const url = `${base}/${cleanedFile}`.replace(/\/$/, "");
 
-  return url.endsWith("/") ? url.slice(0, -1) : url;
+  return url;
 }
