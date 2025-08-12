@@ -1,5 +1,6 @@
 import mdx from "@next/mdx";
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+import { all } from "lowlight";
 import type { NextConfig } from "next";
 import rehypeHighlight from "rehype-highlight";
 import remarkFrontmatter from "remark-frontmatter";
@@ -9,14 +10,11 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 const withMDX = mdx({
   options: {
     remarkPlugins: [remarkFrontmatter, remarkGfm, remarkMdxFrontmatter],
-    rehypePlugins: [rehypeHighlight],
+    rehypePlugins: [[rehypeHighlight, { detect: true, languages: all }]],
   },
 });
 
 const nextConfig: NextConfig = {
-  experimental: {
-    mdxRs: true,
-  },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
