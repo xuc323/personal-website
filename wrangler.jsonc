@@ -23,6 +23,23 @@
    * databases, object storage, AI inference, real-time communication and more.
    * https://developers.cloudflare.com/workers/runtime-apis/bindings/
    */
+  "durable_objects": {
+    "bindings": [
+      { "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" },
+    ],
+  },
+  "kv_namespaces": [
+    {
+      "binding": "NEXT_INC_CACHE_KV",
+      "id": "29cd4b3cc547418e87366181f835bc25",
+    },
+  ],
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["DOQueueHandler"],
+    },
+  ],
 
   /**
    * Environment Variables
@@ -48,5 +65,7 @@
    * Service Bindings (communicate between multiple Workers)
    * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
    */
-  // "services": [{ "binding": "MY_SERVICE", "service": "my-service" }]
+  "services": [
+    { "binding": "WORKER_SELF_REFERENCE", "service": "personal-website" },
+  ],
 }

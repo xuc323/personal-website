@@ -44,7 +44,7 @@ export default function DarkModeIcon() {
     <button
       role="button"
       aria-label="Toggle Dark Mode"
-      className="flex w-6 justify-center overflow-hidden rounded-full border border-gray-200 bg-white p-1 transition-all hover:scale-125 hover:cursor-pointer dark:bg-black"
+      className="flex w-6 justify-center overflow-hidden rounded-full border border-gray-200 bg-white p-1 transition hover:scale-125 hover:cursor-pointer dark:bg-black"
       onClick={handleClick}
     >
       <div
