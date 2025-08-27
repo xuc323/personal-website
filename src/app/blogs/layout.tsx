@@ -1,8 +1,6 @@
-import type { ReactNode } from "react";
-
 export default function Layout({
   children,
-}: Readonly<{ children: ReactNode }>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <div className="px-20 py-10">
       <div className="relative">

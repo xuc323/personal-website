@@ -28,19 +28,18 @@
       { "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" },
     ],
   },
-  "kv_namespaces": [
-    {
-      "binding": "NEXT_INC_CACHE_KV",
-      "id": "29cd4b3cc547418e87366181f835bc25",
-    },
-  ],
   "migrations": [
     {
       "tag": "v1",
       "new_sqlite_classes": ["DOQueueHandler"],
     },
   ],
-
+  "r2_buckets": [
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "personal-website",
+    },
+  ],
   /**
    * Environment Variables
    * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables

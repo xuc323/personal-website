@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { BASE_URL } from "@/utils/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import type { ReactNode } from "react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: ReactNode }>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
