@@ -6,9 +6,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "personal-website",
   "main": ".open-next/worker.js",
-  "compatibility_date": "2025-08-01",
+  "compatibility_date": "2025-11-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "workers_dev": false,
+  "preview_urls": false,
   "minify": true,
   "observability": { "enabled": true },
   /**
@@ -23,23 +24,6 @@
    * databases, object storage, AI inference, real-time communication and more.
    * https://developers.cloudflare.com/workers/runtime-apis/bindings/
    */
-  "durable_objects": {
-    "bindings": [
-      { "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" },
-    ],
-  },
-  "migrations": [
-    {
-      "tag": "v1",
-      "new_sqlite_classes": ["DOQueueHandler"],
-    },
-  ],
-  "r2_buckets": [
-    {
-      "binding": "NEXT_INC_CACHE_R2_BUCKET",
-      "bucket_name": "personal-website",
-    },
-  ],
   /**
    * Environment Variables
    * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
@@ -64,7 +48,5 @@
    * Service Bindings (communicate between multiple Workers)
    * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
    */
-  "services": [
-    { "binding": "WORKER_SELF_REFERENCE", "service": "personal-website" },
-  ],
+  // "services": [{ "binding": "MY_SERVICE", "service": "my-service" }]
 }

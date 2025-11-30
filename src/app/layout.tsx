@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="relative m-0 min-h-screen bg-gradient-to-br from-stone-100 to-sky-300 pb-[54px] transition-all dark:bg-gradient-to-bl dark:from-sky-900 dark:to-black">
+          <div className="relative m-0 min-h-screen bg-linear-to-br from-stone-100 to-sky-300 pb-[54px] transition-all dark:bg-linear-to-bl dark:from-sky-900 dark:to-black">
             <Navbar />
             <main>{children}</main>
             <Footer />

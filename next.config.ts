@@ -8,6 +8,7 @@ import remarkGfm from "remark-gfm";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
 const withMDX = mdx({
+  extension: /\.(md|mdx)$/,
   options: {
     remarkPlugins: [remarkFrontmatter, remarkGfm, remarkMdxFrontmatter],
     rehypePlugins: [[rehypeHighlight, { detect: true, languages: all }]],
@@ -16,6 +17,8 @@ const withMDX = mdx({
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  reactCompiler: true,
+  typedRoutes: true,
 };
 
 // added by create cloudflare to enable calling `getCloudflareContext()` in `next dev`

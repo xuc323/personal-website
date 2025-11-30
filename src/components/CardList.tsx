@@ -28,9 +28,12 @@ export default function CardList({ items }: { items: CardItemProps[] }) {
 function CardItem({ link, name, preview }: CardItemProps) {
   return (
     <li className="group m-2 min-h-[200px] text-center">
-      <Link href={link} className="block h-full w-full rounded-lg border p-2">
+      <Link
+        href={{ pathname: link }}
+        className="block h-full w-full rounded-lg border p-2"
+      >
         <h2 className="text-lg text-blue-600">
-          <span className="bg-gradient-to-r from-blue-300 to-blue-300 bg-[length:0_2px] bg-right-bottom bg-no-repeat transition-[background-size] duration-1000 group-hover:bg-[length:100%_2px] group-hover:bg-left-bottom">
+          <span className="bg-linear-to-r from-blue-300 to-blue-300 bg-size-[0_2px] bg-bottom-right bg-no-repeat transition-[background-size] duration-1000 group-hover:bg-size-[100%_2px] group-hover:bg-bottom-left">
             {name}
           </span>
         </h2>
