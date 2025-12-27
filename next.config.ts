@@ -21,7 +21,8 @@ const nextConfig: NextConfig = {
   typedRoutes: true,
 };
 
-// added by create cloudflare to enable calling `getCloudflareContext()` in `next dev`
+// Enable calling `getCloudflareContext()` in `next dev`.
+// See https://opennext.js.org/cloudflare/bindings#local-access-to-bindings.
 initOpenNextCloudflareForDev();
 
 export default withMDX(nextConfig);
