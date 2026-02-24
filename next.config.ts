@@ -1,4 +1,5 @@
 import mdx from "@next/mdx";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import { all } from "lowlight";
 import type { NextConfig } from "next";
 import rehypeHighlight from "rehype-highlight";
@@ -15,10 +16,12 @@ const withMDX = mdx({
 });
 
 const nextConfig: NextConfig = {
-  output: "standalone",
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   reactCompiler: true,
   typedRoutes: true,
 };
+
+// added by create cloudflare to enable calling `getCloudflareContext()` in `next dev`
+initOpenNextCloudflareForDev();
 
 export default withMDX(nextConfig);

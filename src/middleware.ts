@@ -1,10 +1,10 @@
-import type { ProxyConfig } from "next/server";
+import type { MiddlewareConfig } from "next/server";
 import { NextResponse } from "next/server";
 
-export function proxy() {
+export function middleware() {
   return NextResponse.json("Not found.", { status: 404 });
 }
 
-export const config: ProxyConfig = {
+export const config: MiddlewareConfig = {
   matcher: "/api/:path*",
 };
