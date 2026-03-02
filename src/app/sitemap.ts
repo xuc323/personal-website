@@ -2,6 +2,8 @@ import { BASE_URL } from "@/utils/constants";
 import type { MetadataRoute } from "next";
 import { readdirSync } from "node:fs";
 
+export const dynamic = "force-static";
+
 const FILE_PATTERN = /page\.(ts|tsx|md|mdx)$/;
 const BUILD_TIME = new Date();
 

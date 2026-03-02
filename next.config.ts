@@ -15,7 +15,7 @@ const withMDX = mdx({
 });
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  output: "export",
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   reactCompiler: true,
   typedRoutes: true,
