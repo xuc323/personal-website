@@ -15,9 +15,11 @@ const withMDX = mdx({
 });
 
 const nextConfig: NextConfig = {
+  images: { unoptimized: true },
   output: "export",
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   reactCompiler: true,
+  trailingSlash: true,
   typedRoutes: true,
 };
 
