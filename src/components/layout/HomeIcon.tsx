@@ -14,7 +14,7 @@ export default function HomeIcon() {
           x="15"
           y="70"
           fontSize="70"
-          className="animate-wipe-in-out fill-none stroke-black stroke-2 [stroke-dasharray:400] [stroke-dashoffset:400] dark:stroke-white"
+          className="animate-draw-fill stroke-black stroke-2 text-black [stroke-dasharray:400] [stroke-dashoffset:400] dark:stroke-white dark:text-white"
         >
           XC
         </text>

@@ -48,7 +48,7 @@ export default function DarkModeIcon() {
       onClick={handleClick}
     >
       <div
-        className={`flex w-20 flex-row gap-[19px] duration-300 ${
+        className={`flex w-20 flex-row gap-4.75 duration-300 ${
           mounted ? `opacity-100 ${determineTransition(theme)}` : "opacity-0"
         }`}
       >
@@ -69,9 +69,9 @@ export default function DarkModeIcon() {
 function determineTransition(theme?: string): string {
   switch (theme) {
     case "light":
-      return "translate-x-[33px]";
+      return "translate-x-8.25";
     case "dark":
-      return "-translate-x-[33px]";
+      return "-translate-x-8.25";
     default:
       return "translate-x-0";
   }

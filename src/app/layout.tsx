@@ -1,8 +1,8 @@
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import { ThemeProvider } from "@/components/theme-provider";
 import { BASE_URL } from "@/utils/constants";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -25,8 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="relative m-0 min-h-screen bg-linear-to-br from-stone-100 to-sky-300 pb-[54px] transition-all dark:bg-linear-to-bl dark:from-sky-900 dark:to-black">
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="system"
+          enableSystem
+          scriptProps={{ "data-cfasync": "false" }}
+        >
+          <div className="relative m-0 min-h-screen pb-13.5 transition-all">
             <Navbar />
             <main>{children}</main>
             <Footer />

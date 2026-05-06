@@ -27,7 +27,7 @@ export default function CardList({ items }: { items: CardItemProps[] }) {
 
 function CardItem({ link, name, preview }: CardItemProps) {
   return (
-    <li className="group m-2 min-h-[200px] text-center">
+    <li className="group m-2 min-h-50 text-center">
       <Link
         href={{ pathname: link }}
         className="block h-full w-full rounded-lg border p-2"

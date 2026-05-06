@@ -2,20 +2,31 @@
 @import "tw-animate-css";
 @import "highlight.js/styles/github.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-  --animate-wipe-in-out: wipe-in-out 10s ease-in-out infinite;
+  --animate-draw-fill: draw-fill 8s ease-in-out infinite;
+  --animate-spin-slow: spin 3s linear infinite;
 
-  @keyframes wipe-in-out {
+  @keyframes draw-fill {
     0% {
       stroke-dashoffset: 400;
+      fill: transparent;
     }
+
     50% {
-      stroke-dashoffset: 0;
+      stroke-dashoffset: 80;
+      fill: currentColor;
     }
+
+    85% {
+      stroke-dashoffset: 0;
+      fill: currentColor;
+    }
+
     100% {
       stroke-dashoffset: 400;
+      fill: transparent;
     }
   }
 }

@@ -10,7 +10,7 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 const withMDX = mdx({
   extension: /\.(md|mdx)$/,
   options: {
-    remarkPlugins: [remarkFrontmatter, remarkGfm, remarkMdxFrontmatter],
+    remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
     rehypePlugins: [[rehypeHighlight, { detect: true, languages: all }]],
   },
 });
