@@ -10,9 +10,10 @@
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "minify": true,
   "observability": {
-    "enabled": true,
+    "logs": { "enabled": true, "invocation_logs": true },
+    "traces": { "enabled": true },
   },
-  "preview_urls": false,
+  "preview_urls": true,
   "workers_dev": false,
   /**
    * Smart Placement
