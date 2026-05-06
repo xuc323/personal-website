@@ -12,6 +12,7 @@
   "observability": {
     "enabled": true,
   },
+  "preview_urls": false,
   "workers_dev": false,
   /**
    * Smart Placement
@@ -30,7 +31,8 @@
    * Environment Variables
    * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
    */
-  // "vars": { "MY_VARIABLE": "production_value" },
+  "vars": { "NEXT_TELEMETRY_DISABLED": "1" },
+
   /**
    * Note: Use secrets to store sensitive data.
    * https://developers.cloudflare.com/workers/configuration/secrets/
