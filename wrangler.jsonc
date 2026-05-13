@@ -21,7 +21,9 @@
     "traces": { "enabled": true, "head_sampling_rate": 1, "persist": true },
   },
   "preview_urls": true,
+  "upload_source_maps": true,
   "workers_dev": false,
+
   /**
    * Smart Placement
    * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
