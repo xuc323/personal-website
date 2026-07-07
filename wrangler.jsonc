@@ -6,7 +6,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "personal-website",
   "main": ".open-next/worker.js",
-  "compatibility_date": "2026-05-01",
+  "compatibility_date": "2026-07-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "minify": true,
   "observability": {

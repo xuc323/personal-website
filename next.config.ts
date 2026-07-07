@@ -1,4 +1,4 @@
-import mdx from "@next/mdx";
+import createMDX from "@next/mdx";
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import { all } from "lowlight";
 import type { NextConfig } from "next";
@@ -7,7 +7,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
-const withMDX = mdx({
+const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
   options: {
     remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
