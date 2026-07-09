@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       { url: "/logo.svg", media: "(prefers-color-scheme: light)" },
       { url: "/logo-dark.svg", media: "(prefers-color-scheme: dark)" },
     ],
-    apple: "/apple-icon.png",
+    apple: [{ url: "/apple-icon.png" }],
   },
   keywords: ["Personal Website", "Experiences", "Web Development", "Projects"],
   metadataBase: new URL(BASE_URL),
