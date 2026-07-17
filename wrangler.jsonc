@@ -36,6 +36,7 @@
    * databases, object storage, AI inference, real-time communication and more.
    * https://developers.cloudflare.com/workers/runtime-apis/bindings/
    */
+  "images": { "binding": "IMAGES" },
 
   /**
    * Environment Variables
