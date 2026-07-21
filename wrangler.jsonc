@@ -42,7 +42,7 @@
    * Environment Variables
    * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
    */
-  "vars": { "NEXT_TELEMETRY_DISABLED": "1" },
+  // "vars": { "MY_VARIABLE": "production_value" },
 
   /**
    * Note: Use secrets to store sensitive data.
