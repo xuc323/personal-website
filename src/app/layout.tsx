@@ -24,9 +24,7 @@ export const metadata: Metadata = {
   },
   keywords: ["Personal Website", "Experiences", "Web Development", "Projects"],
   metadataBase: new URL(BASE_URL),
-  openGraph: {},
   title: "Xu Chen",
-  twitter: {},
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
