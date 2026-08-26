@@ -1,17 +1,19 @@
 import createMDX from "@next/mdx";
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
-import { all } from "lowlight";
 import type { NextConfig } from "next";
-import rehypeHighlight from "rehype-highlight";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkGfm from "remark-gfm";
-import remarkMdxFrontmatter from "remark-mdx-frontmatter";
+import path from "node:path";
+
+// Turbopack resolves MDX plugins itself, so every entry below must stay a string
+// with serializable options — one imported function re-breaks the build. Local
+// ones resolve via `require.resolve` relative to the MDX file being compiled,
+// hence absolute paths; tsconfig `@/*` aliases don't apply.
+const local = (file: string) => path.join(process.cwd(), "mdx-plugins", file);
 
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
   options: {
-    remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
-    rehypePlugins: [[rehypeHighlight, { detect: true, languages: all }]],
+    remarkPlugins: ["remark-gfm", "remark-frontmatter", "remark-mdx-frontmatter"],
+    rehypePlugins: [local("rehype-highlight-all.mjs")],
   },
 });
 
