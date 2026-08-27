@@ -30,6 +30,9 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
@@ -45,7 +48,8 @@ jobs:
           # Optional: Configure Claude's behavior with CLI arguments
           claude_args: |
             --max-turns 20
-            --allowedTools "Bash(npm install),Bash(npm ci),Bash(npm run build),Bash(npm run lint:*),WebFetch(domain:*.workers.dev)"
+            --mcp-config '{"mcpServers":{"playwright":{"command":"npx","args":["@playwright/mcp@latest","--headless","--allowed-origins","*.workers.dev"]}}}'
+            --allowedTools "Bash(npm install),Bash(npm ci),Bash(npm run build),Bash(npm run lint:*),WebFetch(domain:*.workers.dev),mcp__playwright__browser_navigate,mcp__playwright__browser_snapshot,mcp__playwright__browser_take_screenshot,mcp__playwright__browser_console_messages,mcp__playwright__browser_evaluate,mcp__playwright__browser_close"
 
           # Optional: Advanced settings configuration
           # settings: |
