@@ -41,4 +41,6 @@ Treat `deploy`/`upload` as user-facing, hard-to-reverse actions — don't run th
 
 ## Verifying changes on a live preview
 
-Cloudflare's GitHub integration posts a preview deployment URL as a PR comment (under `*.workers.dev`, from `wrangler.jsonc`'s `preview_urls` feature) whenever a commit is pushed to an open PR. When asked to validate or check rendering on "the site" / "the preview," look for that comment on the current PR and fetch the URL from it via WebFetch — don't assume a fixed URL.
+Cloudflare's GitHub integration posts a preview deployment URL as a PR comment (under `*.workers.dev`, from `wrangler.jsonc`'s `preview_urls` feature) whenever a commit is pushed to an open PR. When asked to validate or check rendering on "the site" / "the preview," look for that comment on the current PR and drive the URL from it with the Playwright MCP tools (`browser_navigate`, `browser_snapshot`, `browser_take_screenshot`, `browser_console_messages`, `browser_evaluate`) — don't assume a fixed URL. Playwright reads the actual post-render DOM, so it's the right tool for anything JS-dependent: the dark-mode toggle, nav/carousel interactions, console errors.
+
+For markup-only questions (e.g. "did this CSS class end up in the output"), it's faster and needs no network access to build and read the compiled HTML directly: `npm run build`, then `Read`/`Grep` the prerendered file under `.next/server/app/<route>.html` for statically generated routes.
