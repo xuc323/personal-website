@@ -38,3 +38,7 @@ Treat `deploy`/`upload` as user-facing, hard-to-reverse actions — don't run th
 - **Middleware**: [src/middleware.ts](src/middleware.ts) returns 404 JSON for any `/api/:path*` request — there is intentionally no API surface under `/api`. A few standalone route handlers still exist outside that prefix (e.g. `src/app/random/static/route.ts`, `src/app/random/dynamic/route.ts`), used to exercise OpenNext's static-vs-dynamic caching behavior on Cloudflare rather than as a real API.
 - **Cloudflare deployment**: [open-next.config.ts](open-next.config.ts) and [wrangler.jsonc](wrangler.jsonc) configure the OpenNext Cloudflare adapter (static-assets incremental cache, smart placement, Cloudflare Images binding). `cloudflare-env.d.ts` is generated — don't hand-edit it, regenerate via `npm run cf-typegen`.
 - **Formatting**: Prettier config ([prettier.config.ts](prettier.config.ts)) uses `printWidth: 160`, double quotes (`singleQuote: false`), and `prettier-plugin-tailwindcss` for class sorting — run through your editor/Prettier rather than hand-wrapping long lines.
+
+## Verifying changes on a live preview
+
+Cloudflare's GitHub integration posts a preview deployment URL as a PR comment (under `*.workers.dev`, from `wrangler.jsonc`'s `preview_urls` feature) whenever a commit is pushed to an open PR. When asked to validate or check rendering on "the site" / "the preview," look for that comment on the current PR and fetch the URL from it via WebFetch — don't assume a fixed URL.
