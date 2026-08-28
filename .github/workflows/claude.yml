@@ -50,6 +50,7 @@ jobs:
             --max-turns 20
             --mcp-config '{"mcpServers":{"playwright":{"command":"npx","args":["@playwright/mcp@latest","--headless","--allowed-origins","*.workers.dev"]}}}'
             --allowedTools "Bash(npm install),Bash(npm ci),Bash(npm run build),Bash(npm run lint:*),mcp__playwright__browser_navigate,mcp__playwright__browser_snapshot,mcp__playwright__browser_take_screenshot,mcp__playwright__browser_console_messages,mcp__playwright__browser_evaluate,mcp__playwright__browser_close"
+            --append-system-prompt "Validate rendering changes on the deployed preview, not locally. Cloudflare posts a preview deployment URL (under *.workers.dev) as a PR comment whenever a commit is pushed to an open PR; find that comment on the current PR rather than assuming a fixed URL, then drive it with the Playwright MCP tools (browser_navigate, browser_snapshot, browser_take_screenshot, browser_console_messages, browser_evaluate). Playwright reads the post-render DOM, so use it for markup questions as well as JS-dependent behavior: the dark-mode toggle, nav/carousel interactions, console errors. Fall back to a local check only when the preview is unavailable — no preview comment on the PR, or the URL fails to load, which usually means the deployment failed — in which case run npm run build and read the prerendered HTML at .next/server/app/<route>.html, and state clearly that you validated a local build rather than the deployment."
 
           # Optional: Advanced settings configuration
           # settings: |
